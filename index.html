@@ -667,7 +667,7 @@
             </h1>
             
             <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 10px; font-family: 'JetBrains Mono', monospace;">
-                SYSTEM SYSTEM MERGING PROTOCOL
+                SYSTEM MERGING PROTOCOL
             </p>
 
             <div class="guest-box">
@@ -711,9 +711,9 @@
                 <!-- Groom -->
                 <div class="profile-card">
                     <div class="avatar-glow-wrapper">
-                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1w47oCAWtRC_JjznngXURVt_SB2ggDYkFc0NFZPhQJqxvwbMNAuNKvhA2smziG3MBxIBF4MxFpjci__Nf53o3D4f9q8Q4R6PrEZd1k5rvSPGkzgnUiG9umMIHs8fSiGvMcHprnLsoPMN36iGq14tXTz5gV6s2tUVpzF0YXOVR2KoFA/s1152/wdw.jpg" class="couple-avatar" alt="Arie">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1w47oCAWtRC_JjznngXURVot_SB2ggDYkFc0NFZPhQJqxvwbMNAuNKvhA2smziG3MBxIBF4MxFpjci__Nf53o3D4f9q8Q4R6PrEZd1k5rvSPGkzgnUiG9umMIHs8fSiGvMcHprnLsoPMN36iGq14tXTz5gV6s2tUVpzF0YXOVR2KoFA/s1152/wdw.jpg" class="couple-avatar" alt="Arie">
                     </div>
-                    <h2 class="profile-name">Arie, S.Pd.</h2>
+                    <h2 class="profile-name">Arie Azhari, S.Pd.</h2>
                     <p class="profile-tag">Mempelai Pria</p>
                     <p class="profile-desc">Putra Kedua dari Alm. Bapak Djaenudin &amp; Almh. Ibu Sri Harti</p>
                 </div>
@@ -753,9 +753,9 @@
                 <!-- Bride -->
                 <div class="profile-card">
                     <div class="avatar-glow-wrapper">
-                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjhj55_mHVV5wAk3f-ASFFfQTMfADlz_KHOXeWk-lXJYwQpYLnJtz6pHWVMtabZf1gHJkk0AQiyOlIFdUhUr_CL3VvHw91IGLdqOKmrnktnP6ZMnMIZ-s0jWvhHBx_AivFTpROB3c0r_kGrwZmNrYFCiAjEwASx-bAEIyjDTAhJ8x7zg/s632/WhatsApp%20Image%202026-06-17%20at%2023.23.19.jpeg" class="couple-avatar" alt="Nadia">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjhj55_mHVV5wAk3f-ASFFfQTMfDADlz_KHOXeWk-lXJYwQpYLnJtz6pHWVMtabZf1gHJkk0AQiyOlIFdUhUr_CL3VvHw91IGLdqOKmrnktnP6ZMnMIZ-s0jWvhHBx_AivFTpROB3c0r_kGrwZmNrYFCiAjEwASx-bAEIyjDTAhJ8x7zg/s632/WhatsApp%20Image%202026-06-17%20at%2023.23.19.jpeg" class="couple-avatar" alt="Nadia">
                     </div>
-                    <h2 class="profile-name">Nadia, S.Sos.</h2>
+                    <h2 class="profile-name">Nadia Rahyu, S.Sos.</h2>
                     <p class="profile-tag">Mempelai Wanita</p>
                     <p class="profile-desc">Putri kedua dari Bapak Sofyan Dalis dan Ibu Dede Mulyati, S.Pd.</p>
                 </div>
@@ -916,16 +916,16 @@
 
     <!-- Bottom HUD Status Menu -->
     <nav class="bottom-hud-menu">
-        <button class="hud-item active" onclick="scrollToSec('greeting', this)">
-            <i class="fa-solid fa-terminal"></i>
-            <span>Handshake</span>
+        <button class="hud-item active" onclick="goBackToCover(this)">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
         </button>
         <button class="hud-item" onclick="scrollToSec('couple', this)">
             <i class="fa-solid fa-code-merge"></i>
             <span>Profiles</span>
         </button>
         <button class="hud-item" onclick="scrollToSec('events', this)">
-            <i class="fa-solid0 fa-solid fa-server"></i>
+            <i class="fa-solid fa-server"></i>
             <span>Events</span>
         </button>
         <button class="hud-item" onclick="scrollToSec('journey', this)">
@@ -952,7 +952,6 @@
 
         // 2. Proteksi Kredit Sistem
         jQuery(document).ready(function($) {
-            // Memastikan link validasi kredit tetap terbaca di sistem DOM
             if ($('a.xnxx').attr('href') !== 'https://www.temabanua.com/') {
                 // Modifikasi minimalis jika ingin mempertahankan link aslinya di latar belakang
             }
@@ -1050,7 +1049,25 @@
             btn.classList.add('active');
         }
 
-        // 6. Security context blocking contextmenu
+        // 6. Return back to cover controller (Home functionality)
+        function goBackToCover(btn) {
+            playSfx(750, 'sine', 0.08, 0.04);
+            const cover = document.getElementById("lockscreen-cover");
+            if (cover) {
+                // Menampilkan kembali cover depan
+                cover.classList.remove("unlocked");
+                // Mengunci kembali scrolling halaman belakang
+                document.body.classList.add("lock-scroll");
+            }
+            // Mengembalikan scroll ke posisi paling atas
+            window.scrollTo({ top: 0 });
+            
+            // Mengatur kelas aktif ke tombol Home
+            document.querySelectorAll('.hud-item').forEach(item => item.classList.remove('active'));
+            btn.classList.add('active');
+        }
+
+        // 7. Security context blocking contextmenu
         document.addEventListener('contextmenu', function(e) {
             if (e.target.tagName === 'IMG' || e.target.closest('.couple-avatar')) {
                 e.preventDefault();
@@ -1060,7 +1077,7 @@
 
     <!-- ==================== SYSTEM TRACKING GOOGLE SHEETS ==================== -->
     <script type="text/javascript">
-    const CONFIG_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbyPDXvwVbr9M-GWr11ocLnRbA1Gf-eMU1WD5fR9sG7OAMKJ6iHZmH-pnhhSv_sj1s/exec';
+    const CONFIG_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbyPDXvwVbr9M-GWr11ocLnRbA1Gf-eMU1WD5fR9sG7OAMKJ6iHZmH-pnhhSv_i2sj1s/exec';
 
     const PARSED_GUEST_NAME_CACHE = (function() {
       const urlParams = new URLSearchParams(window.location.search);
