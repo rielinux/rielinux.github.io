@@ -2,1701 +2,792 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport"/>
-    <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0GlcPO3h44-3VF9mzrK4IasFMtn3wkrT1GFuGpYE23J595zGuIcFy_16ygc7Py46ogLIkomy-r2gp-v0fEqRJrA-vcEw9sozJG626L_jjxY1x70DrJw7wsUAnqW6TgtJVoREgGCqyaE05BWTTXc_RKgkruDI4zETvgrYrq0vt-22x8A/s1600/file_00000000c32071f8be5fc5af0af521fc.png" rel="icon" type="image/png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Core Terminal | Secure Landing</title>
     
-    <!-- Primary Meta Tags -->
-    <title>Diyar's &amp; Ratna Wedding | Undangan Pernikahan Resmi</title>
-    <meta content="Diyar's &amp; Ratna Wedding | Undangan Pernikahan Resmi" name="title"/>
-    <meta content="Undangan pernikahan digital Diyar Azhari &amp; Ratna Rahyu. Temukan detail acara, lokasi Google Maps, galeri foto, dan simpan tanggal pernikahan kami." name="description"/>
-
-    <!-- Open Graph / Facebook / WhatsApp -->
-    <meta content="website" property="og:type"/>
-    <meta content="https://rieazz.blogspot.com/" property="og:url"/>
-    <meta content="Diyar's &amp; Ratna Wedding | Undangan Pernikahan Resmi" property="og:title"/>
-    <meta content="Undangan pernikahan digital Diyar Azhari &amp; Ratna Rahyu. Temukan detail acara, lokasi Google Maps, galeri foto, dan simpan tanggal pernikahan kami." property="og:description"/>
-    <meta content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsvTjaZMeCal9LAxoTp8LwmQde71Wjfoz3sArd1xoi3MdAtc6RjUzSjU1Rxt7HBm5OqIxdRX1gK4awSZlWzy6lFQ7Dxk4D-3Ld7137L4MYpMC6RyWuuBCqgobT-9C9yRbDnJbUT-2cAXyfc4-j1ZK2r0KsQNiT0Q68mqKekIEmkoLkRQ/s1600/COMPRES.jpeg" property="og:image"/>
-    <meta content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsvTjaZMeCal9LAxoTp8LwmQde71Wjfoz3sArd1xoi3MdAtc6RjUzSjU1Rxt7HBm5OqIxdRX1gK4awSZlWzy6lFQ7Dxk4D-3Ld7137L4MYpMC6RyWuuBCqgobT-9C9yRbDnJbUT-2cAXyfc4-j1ZK2r0KsQNiT0Q68mqKekIEmkoLkRQ/s1600/COMPRES.jpeg" property="og:image:secure_url"/>
-    <meta content="image/jpeg" property="og:image:type"/>
-    <meta content="600" property="og:image:width"/>
-    <meta content="315" property="og:image:height"/>
-
-    <!-- X (Twitter) -->
-    <meta content="summary_large_image" property="twitter:card"/>
-    <meta content="https://rieazz.blogspot.com/" property="twitter:url"/>
-    <meta content="Diyar's &amp; Ratna Wedding | Undangan Pernikahan Resmi" property="twitter:title"/>
-    <meta content="Undangan pernikahan digital Diyar Azhari &amp; Ratna Rahyu. Temukan detail acara, lokasi Google Maps, galeri foto, dan simpan tanggal pernikahan kami." property="twitter:description"/>
-    <meta content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsvTjaZMeCal9LAxoTp8LwmQde71Wjfoz3sArd1xoi3MdAtc6RjUzSjU1Rxt7HBm5OqIxdRX1gK4awSZlWzy6lFQ7Dxk4D-3Ld7137L4MYpMC6RyWuuBCqgobT-9C9yRbDnJbUT-2cAXyfc4-j1ZK2r0KsQNiT0Q68mqKekIEmkoLkRQ/s1600/COMPRES.jpeg" property="twitter:image"/>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" type="text/css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&amp;display=swap" rel="stylesheet" type="text/css"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" type="text/css"/>
-    <link href="https://cdn.jsdelivr.net/gh/rianseo/rianseo.github.io/xnxx/free/nikah.min.css" rel="stylesheet" type="text/css"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" type="text/css"/>
+    <!-- Google Fonts & Icon -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;900&family=Share+Tech+Mono&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <style>
         :root {
-            --font-family: Inter, sans-serif;
-            --link-color: #f9f9f9;
-            --body-text: #111111;
-            --background-body: #f9f9f9;
-            --background-post: #ffffff;
-            --container-width: 680px;
+            --bg-color: #030712;
+            --primary-neon: #00f0ff;
+            --secondary-neon: #bd00ff;
+            --dark-surface: rgba(10, 15, 30, 0.7);
+            --border-neon: rgba(0, 240, 255, 0.2);
+            --text-main: #e2e8f0;
+            --text-mute: #94a3b8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            font: 400 16px Inter, sans-serif;
-            background-color: var(--background-body);
-            color: var(--body-text);
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
         }
 
-        #Image001 .widget-wrap-bg p, 
-        #Image001 .item-data-invite h1, 
-        #Image001 .item-time-invite {
-            color: #ffffff !important;
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #030712;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-neon);
+            border-radius: 4px;
         }
 
-        img {
-            -webkit-touch-callout: none;
-            -webkit-user-select: none;
-            -khtml-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            -webkit-user-drag: none;
-            user-drag: none;
-        }
-
-        .widget-content-img a.zoom, 
-        .widget-content-img a.zoom img {
-            -webkit-touch-callout: none !important;
-            -webkit-user-select: none !important;
-            -khtml-user-select: none !important;
-            -moz-user-select: none !important;
-            -ms-user-select: none !important;
-            user-select: none !important;
-            -webkit-user-drag: none !important;
-            user-drag: none !important;
-        }
-
-        /* ==================== WIDGET COUPLE PREMIUM ELEGANT ==================== */
-        .widget_user {
-            display: flex !important;
-            flex-direction: column !important;
-            align-items: center !important;
-            justify-content: center !important;
-            gap: 50px !important;
-            padding: 60px 20px !important;
-            background: #f8f8f8 !important;
-        }
-
-        @media(min-width:768px) {
-            .widget_user {
-                flex-direction: row !important;
-                gap: 80px !important;
-            }
-        }
-
-        .widget_user .widget-content {
-            display: flex !important;
-            flex-direction: column !important;
-            align-items: center !important;
-            text-align: center !important;
-            max-width: 320px !important;
-            position: relative !important;
-        }
-
-        .couple-avatar-container {
-            position: relative !important;
-            width: 240px !important;
-            height: 240px !important;
-            margin-bottom: 20px !important;
-        }
-
-        .couple-avatar-frame {
-            width: 100% !important;
-            height: 100% !important;
-            border-radius: 50% !important;
-            padding: 6px !important;
-            background: #000 !important;
-            box-shadow: 0 15px 35px rgba(0,0,0,.18), 0 5px 15px rgba(0,0,0,.08) !important;
-            overflow: hidden !important;
-            transition: all .5s ease !important;
-        }
-
-        .couple-avatar-frame::before {
-            content: '' !important;
-            position: absolute !important;
-            top: -10px !important;
-            left: -10px !important;
-            right: -10px !important;
-            bottom: -10px !important;
-            border: 2px solid rgba(0,0,0,.15) !important;
-            border-radius: 50% !important;
-        }
-
-        .couple-avatar-frame:hover {
-            transform: translateY(-8px) scale(1.03) !important;
-            box-shadow: 0 25px 50px rgba(0,0,0,.25), 0 10px 20px rgba(0,0,0,.12) !important;
-        }
-
-        .couple-avatar-img {
-            width: 100% !important;
-            height: 100% !important;
-            border-radius: 50% !important;
-            object-fit: cover !important;
-            object-position: center !important;
-        }
-
-        .couple-name {
-            font-family: 'Inter', sans-serif !important;
-            font-size: 19px !important;
-            font-weight: 700 !important;
-            color: #2c3e50 !important;
-            margin: 8px 0 6px 0 !important;
-            letter-spacing: .2px !important;
-        }
-
-        .couple-name::after {
-            content: '' !important;
-            display: block !important;
-            width: 60px !important;
-            height: 3px !important;
-            background: #000 !important;
-            margin: 12px auto 0 !important;
-            border-radius: 50px !important;
-        }
-
-        .couple-caption {
-            font-size: 15px !important;
-            line-height: 1.8 !important;
-            color: #666 !important;
-            margin-top: 18px !important;
-            max-width: 280px !important;
-        }
-
-        .widget-content {
-            animation: fadeCouple .8s ease both;
-        }
-
-        @keyframes fadeCouple {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* ==================== CSS STYLE SAMPUL DEPAN (COVER PAGE) ==================== */
-        #wedding-cover {
+        /* Canvas Background */
+        #particle-canvas {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)), url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9Cx9_LTIljIEsg2NKHREJCzVsNtYbLxR-EBj0j76_P_XLcoUTpIPgiNld-Lw5Ve3C-QPnvsW7AcSrXJjNinPPlfY3hWXn1EmQORuHGo9R2QGXENbwjFq0GBvQS3-hgS96lasS9GH5IocaLiSzF8B91HB07bBVlOLCqVmq1j0C8yVDow/s1600/ddd_11zon.png') no-repeat center center;
-            background-size: cover;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* ==================== SECURITY SPLASH SCREEN ==================== */
+        #gateway-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, #090d1a 0%, #02040a 100%);
             z-index: 999999;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #ffffff;
-            font-family: 'Inter', sans-serif;
-            text-align: center;
-            transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1), opacity 1.2s ease;
+            font-family: 'Share Tech Mono', monospace;
+            transition: transform 1.2s cubic-bezier(0.85, 0, 0.15, 1), opacity 0.8s ease;
         }
 
-        #wedding-cover.fade-out {
+        #gateway-screen.deactivated {
             transform: translateY(-100%);
             opacity: 0;
             pointer-events: none;
         }
 
-        .cover-content {
-            width: 90%;
-            max-width: 450px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .cover-subtitle {
-            font-size: 13px;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            margin-bottom: 5px;
-            color: rgba(255,255,255,0.8);
-            font-weight: 500;
-        }
-
-        .cover-divider {
-            margin-bottom: 25px;
-        }
-
-        .cover-avatar {
-            width: 160px;
-            height: 240px;
-            border-radius: 120px;
-            border: 2px solid rgba(255,255,255,0.4);
-            overflow: hidden;
-            margin-bottom: 25px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-        }
-
-        .cover-avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .cover-title {
-            font-family: 'Inter', sans-serif;
-            font-size: 24px;
-            font-weight: 600;
-            margin: 0;
-            letter-spacing: 0.5px;
-            color: #ffffff !important;
-        }
-
-        .cover-ampersand {
-            font-family: 'Great Vibes', cursive;
-            font-size: 38px;
-            color: #ffffff;
-            margin: 2px 0;
-            line-height: 1;
-        }
-
-        .cover-to {
-            font-size: 10px;
-            letter-spacing: 2px;
-            color: rgba(255,255,255,0.7);
-            margin-top: 35px;
-            margin-bottom: 5px;
-            font-weight: 600;
-        }
-
-        .cover-guest {
-            font-size: 20px;
-            font-weight: 700;
-            text-decoration: underline;
-            margin-bottom: 35px;
-            color: #ffffff !important;
-        }
-
-        #btn-open-invitation {
-            background: #ffffff;
-            color: #000000;
-            border: none;
-            border-radius: 30px;
-            padding: 12px 30px;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            transition: transform 0.2s, background 0.2s;
-        }
-
-        #btn-open-invitation:hover {
-            transform: scale(1.05);
-            background: #f0f0f0;
-        }
-
-        body.lock-scroll {
-            overflow: hidden !important;
-            height: 100vh !important;
-        }
-
-        /* ==================== CSS STYLE MENU TAB BARU (BOTTOM NAV) ==================== */
-        .bottom-navbar {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 90%;
-            max-width: 480px;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-radius: 40px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 8px 10px;
-            z-index: 999998;
-            border: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .bottom-navbar-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-decoration: none;
-            color: #777777;
-            font-family: 'Inter', sans-serif;
-            font-size: 10.5px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            background: none;
-            border: none;
-            padding: 5px;
-            outline: none;
-        }
-
-        .bottom-navbar-item svg {
-            width: 20px;
-            height: 20px;
-            margin-bottom: 4px;
-            fill: #777777;
-            transition: transform 0.3s ease, fill 0.3s ease;
-        }
-
-        .bottom-navbar-item span {
-            transition: color 0.3s ease;
-        }
-
-        .bottom-navbar-item:hover, .bottom-navbar-item.active {
-            color: #a88a5e;
-        }
-
-        .bottom-navbar-item:hover svg, .bottom-navbar-item.active svg {
-            fill: #a88a5e;
-            transform: translateY(-2px);
-        }
-
-        /* ==================== CSS BARU UNTUK WIDGET RSVP ==================== */
-        .rsvp-section-wrapper {
-            background: #ffffff;
-            padding: 40px 20px;
-            margin: 25px auto;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            max-width: 600px;
+        .gateway-box {
             text-align: center;
-            font-family: 'Inter', sans-serif;
+            max-width: 500px;
+            width: 90%;
+            padding: 40px 20px;
+            border: 1px solid var(--primary-neon);
+            background: rgba(3, 7, 18, 0.9);
+            box-shadow: 0 0 30px rgba(0, 240, 255, 0.15);
+            position: relative;
+            overflow: hidden;
         }
 
-        .rsvp-header h2 {
-            font-family: 'Great Vibes', cursive;
-            font-size: 38px;
-            color: #a88a5e;
-            margin: 10px 0;
+        .gateway-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to right, transparent, rgba(0, 240, 255, 0.1), transparent);
+            animation: sweep 4s infinite linear;
         }
 
-        .rsvp-header p {
-            font-size: 13.5px;
-            line-height: 1.6;
-            color: #666;
+        @keyframes sweep {
+            0% { left: -100%; }
+            50% { left: 150%; }
+            100% { left: 150%; }
+        }
+
+        .gateway-title {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--primary-neon);
+            font-size: 20px;
+            letter-spacing: 4px;
             margin-bottom: 25px;
+            text-transform: uppercase;
         }
 
-        .rsvp-form {
-            text-align: left;
-            max-width: 450px;
+        .gateway-status {
+            color: var(--secondary-neon);
+            font-size: 14px;
+            margin-bottom: 30px;
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0.3; }
+        }
+
+        .btn-decrypt {
+            background: transparent;
+            color: var(--primary-neon);
+            border: 1px solid var(--primary-neon);
+            padding: 12px 35px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .btn-decrypt:hover {
+            background: var(--primary-neon);
+            color: var(--bg-color);
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+        }
+
+        /* ==================== CONTENT LAYOUT ==================== */
+        .app-container {
+            position: relative;
+            z-index: 10;
+            max-width: 960px;
             margin: 0 auto;
+            padding: 40px 20px 120px 20px;
         }
 
-        .rsvp-form-group {
-            margin-bottom: 15px;
-        }
-
-        .rsvp-form-group label {
-            font-weight: 600;
-            font-size: 14px;
-            display: block;
-            margin-bottom: 8px;
-            color: #333333;
-        }
-
-        .rsvp-input-text, .rsvp-textarea {
-            width: 100%;
-            padding: 10px 15px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-            font-size: 14px;
-            background-color: #fafafa;
-            transition: border-color 0.3s, background-color 0.3s;
-        }
-
-        .rsvp-input-text:focus, .rsvp-textarea:focus {
-            border-color: #a88a5e;
-            background-color: #ffffff;
-            outline: none;
-        }
-
-        .rsvp-radio-group {
+        /* Header HUD */
+        .hud-header {
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px dashed var(--border-neon);
+            padding-bottom: 15px;
+            margin-bottom: 40px;
+            font-family: 'Share Tech Mono', monospace;
+            color: var(--primary-neon);
+            font-size: 12px;
+        }
+
+        .hud-header .sys-info {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Card Template (Glassmorphism + Tech Borders) */
+        .tech-card {
+            background: var(--dark-surface);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border-neon);
+            padding: 30px;
+            margin-bottom: 30px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Tech corner decoration */
+        .tech-card::after {
+            content: '';
+            position: absolute;
+            top: -1px;
+            right: -1px;
+            border-width: 0 12px 12px 0;
+            border-style: solid;
+            border-color: transparent var(--bg-color) transparent transparent;
+            display: block;
+            width: 0;
+        }
+
+        .tech-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 15px;
+            height: 1px;
+            background: var(--primary-neon);
+        }
+
+        /* Terminal Widget */
+        .terminal-box {
+            font-family: 'Share Tech Mono', monospace;
+            background: rgba(1, 4, 9, 0.9);
+            border-left: 3px solid var(--primary-neon);
+            padding: 20px;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #5af78e;
+            overflow-y: auto;
+            max-height: 250px;
+        }
+
+        .terminal-box .term-user {
+            color: var(--primary-neon);
+        }
+
+        /* Section Headings */
+        .sec-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 24px;
+            letter-spacing: 2px;
+            color: #ffffff;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
             gap: 10px;
         }
 
-        .rsvp-radio-label {
-            font-weight: 500;
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            color: #555555;
+        .sec-title i {
+            color: var(--primary-neon);
+            font-size: 18px;
         }
 
-        .rsvp-radio-label input {
-            margin-right: 8px;
+        /* Grid Services / Specs */
+        .grid-tech {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
         }
 
-        .btn-submit-rsvp {
-            background: linear-gradient(135deg, #c5a880 0%, #a88a5e 100%);
-            color: #ffffff;
-            border: none;
-            padding: 12px 28px;
-            font-size: 14px;
-            font-weight: 700;
-            border-radius: 30px;
-            width: 100%;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(168, 138, 94, 0.3);
+        .grid-item {
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid var(--border-neon);
+            padding: 25px;
             transition: all 0.3s ease;
-            outline: none;
         }
 
-        .btn-submit-rsvp:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(168, 138, 94, 0.4);
+        .grid-item:hover {
+            border-color: var(--secondary-neon);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(189, 0, 255, 0.15);
+        }
+
+        .grid-icon {
+            font-size: 28px;
+            color: var(--primary-neon);
+            margin-bottom: 15px;
+        }
+
+        .grid-item h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .grid-item p {
+            font-size: 13.5px;
+            line-height: 1.6;
+            color: var(--text-mute);
+        }
+
+        /* Timeline / Roadmap */
+        .timeline {
+            position: relative;
+            padding-left: 20px;
+            border-left: 1px dashed var(--border-neon);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -26px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--secondary-neon);
+            box-shadow: 0 0 10px var(--secondary-neon);
+        }
+
+        .timeline-date {
+            font-family: 'Share Tech Mono', monospace;
+            color: var(--primary-neon);
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        .timeline-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+
+        .timeline-desc {
+            font-size: 13.5px;
+            color: var(--text-mute);
+            line-height: 1.5;
+        }
+
+        /* Secure Uplink Form (Contact) */
+        .cyber-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 12px;
+            color: var(--primary-neon);
+            text-transform: uppercase;
+        }
+
+        .form-input {
+            background: rgba(1, 4, 9, 0.7);
+            border: 1px solid var(--border-neon);
+            padding: 12px 15px;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary-neon);
+            box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, #1f2937, #111827);
+            color: var(--primary-neon);
+            border: 1px solid var(--primary-neon);
+            padding: 14px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-submit:hover {
+            background: var(--primary-neon);
+            color: var(--bg-color);
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+        }
+
+        /* ==================== BOTTOM HUD NAVIGATION ==================== */
+        .hud-nav {
+            position: fixed;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 500px;
+            background: rgba(10, 15, 30, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--border-neon);
+            border-radius: 30px;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            z-index: 1000;
+        }
+
+        .hud-nav-item {
+            background: none;
+            border: none;
+            color: var(--text-mute);
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 11px;
+            transition: all 0.3s;
+        }
+
+        .hud-nav-item i {
+            font-size: 16px;
+        }
+
+        .hud-nav-item:hover, .hud-nav-item.active {
+            color: var(--primary-neon);
+            text-shadow: 0 0 5px var(--primary-neon);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .app-container {
+                padding: 20px 15px 120px 15px;
+            }
+            .hud-header {
+                flex-direction: column;
+                gap: 10px;
+                align-items: flex-start;
+            }
         }
     </style>
-
-    <!-- ==================== STRUCTURED DATA / SCHEMA MARKUP START ==================== -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Event",
-      "name": "Pernikahan Diyar Azhari & Ratna Rahyu",
-      "description": "Undangan Pernikahan Resmi Diyar Azhari, S.Pd. & Ratna Rahyu, S.Sos. pada tanggal 25 Juli 2026 di Tangerang.",
-      "startDate": "2026-07-25T12:00:00+07:00",
-      "endDate": "2026-07-25T17:00:00+07:00",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-      "image": [
-        "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9Cx9_LTIljIEsg2NKHREJCzVsNtYbLxR-EBj0j76_P_XLcoUTpIPgiNld-Lw5Ve3C-QPnvsW7AcSrXJjNinPPlfY3hWXn1EmQORuHGo9R2QGXENbwjFq0GBvQS3-hgS96lasS9GH5IocaLiSzF8B91HB07bBVlOLCqVmq1j0C8yVDow/s1600/ddd_11zon.png"
-      ],
-      "location": {
-        "@type": "Place",
-        "name": "Kediaman Mempelai Wanita (Villa Tangerang Regency 2)",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Villa Tangerang regency 2 blok FC No18 RT/RW 007/009 kec. Psr Kemis, kel. Gelam jaya",
-          "addressLocality": "Tangerang",
-          "addressRegion": "Banten",
-          "addressCountry": "ID"
-        }
-      },
-      "performer": [
-        {
-          "@type": "Person",
-          "name": "Diyar Azhari"
-        },
-        {
-          "@type": "Person",
-          "name": "Ratna Rahyu"
-        }
-      ]
-    }
-    </script>
-    <!-- ==================== STRUCTURED DATA / SCHEMA MARKUP END ==================== --> 
 </head>
-
 <body>
 
-    <!-- ==================== HTML SAMPUL DEPAN (COVER PAGE) ==================== -->
-    <div id="wedding-cover">
-      <div class="cover-content">
-        <p class="cover-subtitle">WEDDING INVITATION</p>
-        
-        <div class="cover-divider">
-          <svg fill="none" height="10" viewBox="0 0 100 10" width="80" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 5 Q 25 0, 50 5 T 100 5" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
-            <circle cx="50" cy="5" fill="rgba(255,255,255,0.8)" r="3"/>
-          </svg>
+    <!-- Lightweight Particle Network Background -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- ==================== SECURITY SPLASH SCREEN ==================== -->
+    <div id="gateway-screen">
+        <div class="gateway-box animate__animated animate__zoomIn">
+            <h1 class="gateway-title">Access Gateway</h1>
+            <p class="gateway-status">SECURE DECRYPTION KEY REQUIRED</p>
+            <button class="btn-decrypt" id="btn-decrypt" onclick="initializeSystem()">INITIALIZE SESSION</button>
         </div>
+    </div>
+
+    <!-- ==================== MAIN CONTENT SYSTEM ==================== -->
+    <div class="app-container">
         
-        <div class="cover-avatar">
-          <img alt="Diyar &amp; Ratna" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9Cx9_LTIljIEsg2NKHREJCzVsNtYbLxR-EBj0j76_P_XLcoUTpIPgiNld-Lw5Ve3C-QPnvsW7AcSrXJjNinPPlfY3hWXn1EmQORuHGo9R2QGXENbwjFq0GBvQS3-hgS96lasS9GH5IocaLiSzF8B91HB07bBVlOLCqVmq1j0C8yVDow/s1600/ddd_11zon.png"/>
-        </div>
-        
-        <h1 class="cover-title">Diyar</h1>
-        <span class="cover-ampersand">&amp;</span>
-        <h1 class="cover-title">Ratna</h1>
-        
-        <p class="cover-to">KEPADA YTH. BAPAK/IBU/SAUDARA/I</p>
-        <h2 class="cover-guest" id="cover-guest-name">Tamu Undangan</h2>
-        
-        <button id="btn-open-invitation">
-          <svg fill="currentColor" height="16" style="vertical-align: middle; margin-right: 8px;" viewBox="0 0 24 24" width="16"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-          BUKA UNDANGAN
+        <!-- HUD System Info Header -->
+        <header class="hud-header">
+            <div>NODE ID: <span id="node-val">990X-CORE</span></div>
+            <div class="sys-info">
+                <div>SYS_STATUS: <span style="color: #5af78e;">ONLINE</span></div>
+                <div>SEC_LEVEL: <span style="color: var(--secondary-neon);">LEVEL_9</span></div>
+            </div>
+        </header>
+
+        <!-- SEC 1: Interactive Terminal -->
+        <section id="terminal-section" class="tech-card wow animate__animated animate__fadeInUp">
+            <div class="sec-title">
+                <i class="fa-solid fa-terminal"></i>
+                <h2>Main Terminal</h2>
+            </div>
+            <div class="terminal-box" id="terminal">
+                <span class="term-user">guest@quantum-system:~$</span> <span id="typed-command"></span>
+            </div>
+        </section>
+
+        <!-- SEC 2: Specs Grid -->
+        <section id="core-specs" class="tech-card wow animate__animated animate__fadeInUp">
+            <div class="sec-title">
+                <i class="fa-solid fa-microchip"></i>
+                <h2>Core Architecture</h2>
+            </div>
+            <div class="grid-tech">
+                <div class="grid-item">
+                    <div class="grid-icon"><i class="fa-solid fa-brain"></i></div>
+                    <h3>Cognitive AI Engines</h3>
+                    <p>Integrasi kustom dengan jaringan syaraf tiruan generasi berikutnya untuk optimalisasi logika asinkron.</p>
+                </div>
+                <div class="grid-item">
+                    <div class="grid-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>Adaptive Defense</h3>
+                    <p>Protokol otomatisasi pertahanan siber yang secara adaptif mengisolasi anomali aliran instruksi eksternal.</p>
+                </div>
+                <div class="grid-item">
+                    <div class="grid-icon"><i class="fa-solid fa-cloud-bolt"></i></div>
+                    <h3>Cloud Overlord</h3>
+                    <p>Arsitektur tanpa server (serverless) hibrida dengan waktu latensi transaksi mendekati nol.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEC 3: Roadmap -->
+        <section id="roadmap-section" class="tech-card wow animate__animated animate__fadeInUp">
+            <div class="sec-title">
+                <i class="fa-solid fa-route"></i>
+                <h2>Project Roadmap</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">PHASE_01 // ACTIVE</div>
+                    <div class="timeline-title">Core Infrastructure Build</div>
+                    <div class="timeline-desc">Penyusunan pondasi backend terdesentralisasi dan optimasi struktur pipa pengiriman data berkelanjutan.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">PHASE_02 // PLANNED</div>
+                    <div class="timeline-title">Cognitive Integration</div>
+                    <div class="timeline-desc">Meluncurkan fungsionalitas asisten pintar berbasis model bahasa besar (LLM) di sisi klien.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">PHASE_03 // PROSPECT</div>
+                    <div class="timeline-title">Full Decentralization</div>
+                    <div class="timeline-desc">Migrasi kontrol node server utama ke sistem konsensus berbasis kluster peer-to-peer (P2P).</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEC 4: Secure Uplink Form -->
+        <section id="uplink-section" class="tech-card wow animate__animated animate__fadeInUp">
+            <div class="sec-title">
+                <i class="fa-solid fa-envelope-open-text"></i>
+                <h2>Secure Uplink</h2>
+            </div>
+            <form class="cyber-form" id="uplinkForm" onsubmit="handleUplinkSubmit(event)">
+                <div class="form-group">
+                    <label for="caller">Identity / Name</label>
+                    <input type="text" id="caller" class="form-input" placeholder="Masukkan identitas pengirim" required>
+                </div>
+                <div class="form-group">
+                    <label for="comms">Transmission Message</label>
+                    <textarea id="comms" class="form-input" rows="4" placeholder="Tulis pesan komunikasi terenkripsi..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">BROADCAST SIGNAL</button>
+            </form>
+        </section>
+
+    </div>
+
+    <!-- HUD BOTTOM NAVIGATION BAR -->
+    <nav class="hud-nav">
+        <button class="hud-nav-item active" onclick="scrollToSec('terminal-section', this)">
+            <i class="fa-solid fa-terminal"></i>
+            <span>Terminal</span>
         </button>
-      </div>
-    </div>
-      
-    <div class="container">
-      <div class="widget_scroll">
-        
-        <!-- Background Banner Section -->
-        <div class="widget_bg animate__animated" id="widget_bg">
-          <div class="image-wrapper" style="background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhgDatgXoNZ4pnKboHUJqYw6xgdSc_SV4hJFWRS_ERBLLYzqV33qwoo0BMffix93S5iY3H_sImwCWo07-ZLa6p00wBDDwA6IYRFV72yoE5WK1IEkpwURzdVkybBVHYxlRtDMOqCm1UX-7xh2A7ZdX7tBOAibJ0EdWL66ytQ8HxuBqvDww/s1600/ChatGPT%20Image%20Jun%207,%202026,%2011_26_30%20PM.png');">
-            <div class="widget-flex-bg">
-              <div class="widget-wrap-bg wow animate__animated animate__fadeIn">
-                <p class="wow animate__animated animate__zoomIn">YOU' ARE INVITED TO THE WEDDING OF</p>
-                <div class="item-data-invite animate__animated animate__zoomIn">
-                  <h1>Diyar Azhari, S.Pd. &amp; Ratna Rahyu, S.Sos.</h1>
-                  <div class="item-time-invite wow animate__animated animate__fadeInUp">
-                    25 . 07 . 2026
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <button class="hud-nav-item" onclick="scrollToSec('core-specs', this)">
+            <i class="fa-solid fa-microchip"></i>
+            <span>Core</span>
+        </button>
+        <button class="hud-nav-item" onclick="scrollToSec('roadmap-section', this)">
+            <i class="fa-solid fa-route"></i>
+            <span>Roadmap</span>
+        </button>
+        <button class="hud-nav-item" onclick="scrollToSec('uplink-section', this)">
+            <i class="fa-solid fa-network-wired"></i>
+            <span>Uplink</span>
+        </button>
+    </nav>
 
-        <div class="widget-content-layout">
-          
-          <!-- Kata Kutipan -->
-          <div class="widget_note" id="widget_note">
-            <div class="text-content">
-              <p class="text-style">Dan Diantara tanda-tanda kebesaran-Nya ialah diciptakan-Nya untukmu pasangan hidup dari jenismu sendiri supaya kamu mendapatkan ketenangan hati dan dijadikan-Nya kasih sayang diantara kamu, sesungguhnya yang demikian menjadi tanda-tanda kebesaran-Nya bagi orang-orang yang berfikir.<br/><br/>( Q.S. Ar-Rum: 21)</p>
-            </div>
-          </div>
-          
-          <!-- Widget Pembuka -->
-          <div class="widget_opening" id="widget_opening">
-            <div class="title wow animate__animated animate__fadeInUp" style="font-family: 'Inter', sans-serif !important; text-align: center; text-transform: none !important; font-weight: 400 !important; color: #444444 !important; font-size: 15px !important; line-height: 1.8 !important;">
-              <!-- Basmalah -->
-              <div class="basmalah" style="font-family: serif !important; font-size: 36px !important; margin-bottom: 12px !important; font-weight: normal !important; color: #333333 !important; direction: rtl !important; unicode-bidi: isolate !important;"> ﷽ </div>
-                         
-              <!-- Salam -->
-              <div class="salam" style="font-family: 'Inter', sans-serif !important; font-size: 16px !important; font-weight: 600 !important; margin-bottom: 20px !important; color: #333333 !important;">
-                Assalamu'alaikum Warahmatullahi Wabarakatuh
-              </div>
-              
-              <!-- Kalimat Pembuka Undangan -->
-              <div class="deskripsi-undangan" style="font-family: 'Inter', sans-serif !important; font-size: 14px !important; line-height: 1.8 !important; color: #555555 !important; font-weight: bold !important;">
-                Tanpa mengurangi rasa hormat, dengan segala kerendahan hati serta memohon rahmat dan ridha Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk berkenan hadir and memberikan doa restu pada acara pernikahan kami.
-              </div>
-            </div>
-          </div>
-          
-          <!-- Widget Couple -->
-          <div class="widget_user" id="widget_user">
-            <!-- Pria -->
-            <div class="widget-content wow animate__animated animate__fadeInUp">
-              <div class="couple-avatar-container">
-                <div class="couple-avatar-frame">
-                  <img class="couple-avatar-img" alt="Diyar Azhari, S.Pd." id="Image003_img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1w47oCAWtRC_JjznngXURVot_SB2ggDYkFc0NFZPhQJqxvwbMNAuNKvhA2smziG3MBxIBF4MxFpjci__Nf53o3D4f9q8Q4R6PrEZd1k5rvSPGkzgnUiG9umMIHs8fSiGvMcHprnLsoPMN36iGq14tXTz5gV6s2tUVpzF0YXOVR2KoFA/s1152/wdw.jpg"/>
-                </div>
-              </div>
-              <h2 class="couple-name">Diyar Azhari, S.Pd.</h2>
-              <p class="couple-caption">Putra Kedua dari Alm. Bapak Djaenudin &amp; Almh. Ibu Sri Harti</p>
-            </div>
+    <!-- WOW.js & Custom Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW().init();
 
-            <!-- Wanita -->
-            <div class="widget-content wow animate__animated animate__fadeInUp">
-              <div class="couple-avatar-container">
-                <div class="couple-avatar-frame">
-                  <img class="couple-avatar-img" alt="Ratna Rahyu, S.Sos." id="Image002_img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjhj55_mHVV5wAk3f-ASFFfQTMfDADlz_KHOXeWk-lXJYwQpYLnJtz6pHWVMtabZf1gHJkk0AQiyOlIFdUhUr_CL3VvHw91IGLdqOKmrnktnP6ZMnMIZ-s0jWvhHBx_AivFTpROB3c0r_kGrwZmNrYFCiAjEwASx-bAEIyjDTAhJ8x7zg/s632/WhatsApp%20Image%202026-06-17%20at%2023.23.19.jpeg"/>
-                </div>
-              </div>
-              <h2 class="couple-name">Ratna Rahyu, S.Sos.</h2>
-              <p class="couple-caption">Putri kedua dari Bapak Sofyan Dalis dan Ibu Dede Mulyati, S.Pd.</p>
-            </div>
-          </div>
-          
-          <!-- Widget Terima Kasih -->
-          <div class="widget_thank_you" id="widget_thank_you">
-            <div class="thank-you-content wow animate__animated animate__fadeInUp" style="text-align: center; margin: 30px auto; max-width: 600px; padding: 0 15px;">
-              <p style="font-family: 'Inter', sans-serif; font-size: 15px; font-weight: bold; line-height: 1.6; color: #444444; margin-bottom: 0;">
-                Tidak Ada Kata Yang Dapat Kami Ucapkan Selain Ucapan Terima Kasih Atas Kehadiran Bapak/Ibu dan Saudara/i,
-              </p>
-              <p style="font-family: 'Inter', sans-serif; font-size: 15px; font-weight: bold; line-height: 1.6; color: #444444; margin-top: 20px; margin-bottom: 0;">
-                Wassalamu'alaikum Warahmatullahi Wabarakatuh
-              </p>
-            </div>
-          </div>
-          
-          <!-- Foto Lamaran Divider -->
-          <div class="widget_image_text" id="widget_image_text">
-            <div class="widget-bg-custom" style="background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhvci1U32Q5UugichgUgY3sb6QRXcXxXAnMMLxXQXjVB8gNUsHpc6bEh4lIn-MD640LkZfTwMfVaRokkPsN-lU8dHi5s_QsfP57b24MfsNRQzXJNJouyRzhLP__aPMdECikmCgOsKdb9zh1qY_V-o4mJk0ACFp3TQ56MJmuA0SKBjhOBw/s844/ccc.png');">
-              <h2 class="wow animate__animated animate__fadeInUp">Foto Lamaran</h2>
-            </div>
-          </div>
+        // ==================== WEB AUDIO FUTURISTIC EFFECTS ====================
+        // Audio Synthesis (No external file needed)
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
-          <!-- Gallery Grid -->
-          <div class="widget_image gallery_zoom" id="widget_image">
-            <!-- Moment 1 -->
-            <div class="widget-content-img wow animate__animated animate__fadeInDown">
-              <a class="zoom" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgG6fLYh2BHfMzh9X73MCLLDnkQVsNxu8nWLQCWC80FlU3Ti1EnD_pvC520Vs55ZYkPPNdylPKc7V_yMd9TQ__nDeFxr6do5U0WD7W1b6PA42lEveeXycBNhExhyphenhyphenIJ8zs_pv6J1l9PCoFd45D7LnUZAbv-SvV3NtvnoKd5DUgACLQWThw/s1500/COMPRES.jpeg" title="Image Moment 1">
-                <img class="lazyload" alt="Image Moment 1" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgG6fLYh2BHfMzh9X73MCLLDnkQVsNxu8nWLQCWC80FlU3Ti1EnD_pvC520Vs55ZYkPPNdylPKc7V_yMd9TQ__nDeFxr6do5U0WD7W1b6PA42lEveeXycBNhExhyphenhyphenIJ8zs_pv6J1l9PCoFd45D7LnUZAbv-SvV3NtvnoKd5DUgACLQWThw/s1500/COMPRES.jpeg" height="787" width="1500"/>
-              </a>
-            </div>
-            <!-- Moment 2 -->
-            <div class="widget-content-img wow animate__animated animate__fadeInDown">
-              <a class="zoom" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjoiXqhsV9dttmjG51_z5bVEQZrNSRyT965_cdJ7h95AFlq0Crcy9GEy8Yrncy2EqQ5LOUWVeASsOLVGvFL3tbvit5QiPxRIBQXPNO6H3V_RotqWRTcqUrLKdCguTHZVWS1G9dBkPukDZksFgDO9E5-BVANuavgQEmPppUEeGQ5XWptdQ/s1600/file_0000000058f071fd86d98fcf2684d78d.png" title="Image Moment 2">
-                <img class="lazyload" alt="Image Moment 2" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjoiXqhsV9dttmjG51_z5bVEQZrNSRyT965_cdJ7h95AFlq0Crcy9GEy8Yrncy2EqQ5LOUWVeASsOLVGvFL3tbvit5QiPxRIBQXPNO6H3V_RotqWRTcqUrLKdCguTHZVWS1G9dBkPukDZksFgDO9E5-BVANuavgQEmPppUEeGQ5XWptdQ/s1600/file_0000000058f071fd86d98fcf2684d78d.png" height="533" width="1600"/>
-              </a>
-            </div>
-            <!-- Moment 3 -->
-            <div class="widget-content-img wow animate__animated animate__fadeInDown">
-              <a class="zoom" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgG6fLYh2BHfMzh9X73MCLLDnkQVsNxu8nWLQCWC80FlU3Ti1EnD_pvC520Vs55ZYkPPNdylPKc7V_yMd9TQ__nDeFxr6do5U0WD7W1b6PA42lEveeXycBNhExhyphenhyphenIJ8zs_pv6J1l9PCoFd45D7LnUZAbv-SvV3NtvnoKd5DUgACLQWThw/s1500/COMPRES.jpeg" title="Image Moment 3">
-                <img class="lazyload" alt="Image Moment 3" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgG6fLYh2BHfMzh9X73MCLLDnkQVsNxu8nWLQCWC80FlU3Ti1EnD_pvC520Vs55ZYkPPNdylPKc7V_yMd9TQ__nDeFxr6do5U0WD7W1b6PA42lEveeXycBNhExhyphenhyphenIJ8zs_pv6J1l9PCoFd45D7LnUZAbv-SvV3NtvnoKd5DUgACLQWThw-SvV3NtvnoKd5DUgACLQWThw/s1500/COMPRES.jpeg" height="787" width="1500"/>
-              </a>
-            </div>
-            <!-- Moment 4 -->
-            <div class="widget-content-img wow animate__animated animate__fadeInDown">
-              <a class="zoom" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdJKqsTi0bVZ_YBdmNxA7HS2Zu7236h-Gi4oMEkuWpqPn6K0cNiXzVt1Qrq0cSoAHVu4aUBSRQfrUwaKNLN2u6G6N_EDJzXMgKV9ukW-ZYkdgMCugZaGf5XlxETwnsx5qb29lsd9NAImmi8gIFFoCbk7SPHD2qmxtCqq0zM8v_VZZxsw/s1600/file_0000000058f071fd86d98fcf2684d78d.png" title="Image Moment 4">
-                <img class="lazyload" alt="Image Moment 4" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdJKqsTi0bVZ_YBdmNxA7HS2Zu7236h-Gi4oMEkuWpqPn6K0cNiXzVt1Qrq0cSoAHVu4aUBSRQfrUwaKNLN2u6G6N_EDJzXMgKV9ukW-ZYkdgMCugZaGf5XlxETwnsx5qb29lsd9NAImmi8gIFFoCbk7SPHD2qmxtCqq0zM8v_VZZxsw/s1600/file_0000000058f071fd86d98fcf2684d78d.png" height="533" width="1600"/>
-              </a>
-            </div>
-            <!-- Moment 5 -->
-            <div class="widget-content-img wow animate__animated animate__fadeInUp">
-              <a class="zoom" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdJKqsTi0bVZ_YBdmNxA7HS2Zu7236h-Gi4oMEkuWpqPn6K0cNiXzVt1Qrq0cSoAHVu4aUBSRQfrUwaKNLN2u6G6N_EDJzXMgKV9ukW-ZYkdgMCugZaGf5XlxETwnsx5qb29lsd9NAImmi8gIFFoCbk7SPHD2qmxtCqq0zM8v_VZZxsw/s1600/file_0000000058f071fd86d98fcf2684d78d.png" title="Image Moment 5">
-                <img class="lazyload" alt="Image Moment 5" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdJKqsTi0bVZ_YBdmNxA7HS2Zu7236h-Gi4oMEkuWpqPn6K0cNiXzVt1Qrq0cSoAHVu4aUBSRQfrUwaKNLN2u6G6N_EDJzXMgKV9ukW-ZYkdgMCugZaGf5XlxETwnsx5qb29lsd9NAImmi8gIFFoCbk7SPHD2qmxtCqq0zM8v_VZZxsw/s1600/file_0000000058f071fd86d98fcf2684d78d.png" height="533" width="1600"/>
-              </a>
-            </div>
-            <!-- Moment 6 -->
-            <div class="widget-content-img wow animate__animated animate__fadeInUp">
-              <a class="zoom" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgG6fLYh2BHfMzh9X73MCLLDnkQVsNxu8nWLQCWC80FlU3Ti1EnD_pvC520Vs55ZYkPPNdylPKc7V_yMd9TQ__nDeFxr6do5U0WD7W1b6PA42lEveeXycBNhExhyphenhyphenIJ8zs_pv6J1l9PCoFd45D7LnUZAbv-SvV3NtvnoKd5DUgACLQWThw/s1500/COMPRES.jpeg" title="Image Moment 6">
-                <img class="lazyload" alt="Image Moment 6" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgG6fLYh2BHfMzh9X73MCLLDnkQVsNxu8nWLQCWC80FlU3Ti1EnD_pvC520Vs55ZYkPPNdylPKc7V_yMd9TQ__nDeFxr6do5U0WD7W1b6PA42lEveeXycBNhExhyphenhyphenIJ8zs_pv6J1l9PCoFd45D7LnUZAbv-SvV3NtvnoKd5DUgACLQWThw/s1500/COMPRES.jpeg" height="787" width="1500"/>
-              </a>
-            </div>
-          </div>
-
-          <!-- Acara Pernikahan (Timer Countdown) -->
-          <div class="widget_item-1" id="widget_item-1">
-            <div class="tMG">
-              <div class="widget-content-acara" style="background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhJ2q7kzKfOV8GEK1V0_spznGfXsEHmJdBxz6MEEgJeO3p2-aQhoW9skQaeCUGHMSnvdAar35Bt-zp8RP0F90BM3_UwV1kfYeGQGMQKMw7TS5ZBVowuuDUwDLJp6J8nE-0g8xgR6ht3flF_gEWNVzrMGTZauXulnbSvYx9_bJARqd4AbFQC8DJPx4IMg8c/s1422/ChatGPT%20Image%20Jun%2011,%202026,%2007_54_38%20PM.png');">
-                <div class="widget-item-acara">
-                  <h2 class="wow animate__animated animate__fadeInDown">Acara Akan Dilaksanakan Pada</h2>
-                  <div class="counter-meter" data-date="July 25, 2026 12:00:00">
-                    <ul class="wow animate__animated animate__fadeInUp">
-                      <li class="tDay">
-                        <span id="days">0</span>
-                        <strong>Hari</strong>
-                      </li>
-                      <li>
-                        <span id="hours">0</span>
-                        <strong>Jam</strong>
-                      </li>
-                      <li>
-                        <span id="minutes">0</span>
-                        <strong>Menit</strong>
-                      </li>
-                      <li>
-                        <span id="seconds">0</span>
-                        <strong>Detik</strong>
-                      </li>
-                    </ul>
-                  </div>
-                  <p class="caption wow animate__animated animate__fadeInUp">July 25, 2026 12:00:00</p>
-                </div>
-                <div class="widget-acara-btn">
-                  <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=NmswZnZkbzZpdHRxcGR1cGZwcG5lbzlpbGMgdmVrdG9yc2VvNzkwQG0&amp;tmsrc=vektorseo790%40gmail.com" rel="nofollow" style="color: #000000 !important;" target="_blank">Simpan Acara Ke Kalender Google Anda</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Maps & Lokasi -->
-          <div class="widget_item-map" id="widget_item-map">
-            <div class="widget-content">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3966.7518735765148!2d106.56783127498987!3d-6.163975093823256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwMDknNTAuMyJTIDEwNsKwMzQnMTMuNSJF!5e0!3m2!1sid!2sid!4v1779389470333!5m2!1sid!2sid" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            <div class="widget-content-lokasi">
-              <p class="wow animate__animated animate__fadeInDown">Villa Tangerang regency 2 blok FC No18 RT/RW 007/009 kec. Psr Kemis , kel. Gelam jaya kab. Tangerang</p>
-              <p class="wow animate__animated animate__fadeInDown">
-                <a href="https://maps.app.goo.gl/q1VUsDVUoE7SEpfc6" title="Villa Tangerang regency 2 blok FC No18 RT/RW 007/009 kec. Psr Kemis , kel. Gelam jaya kab. Tangerang" id="btnLihatLokasi" rel="nofollow" target="_blank">Lihat Lokasi</a>
-              </p>
-            </div>
-          </div>
-
-          <!-- Amplop Digital -->
-          <div class="widget_amplop_digital" id="widget_amplop_digital">
-            <div class="amplop-digital-section wow animate__animated animate__fadeInUp">
-              <div class="amplop-header">
-                <img alt="Gift Icon" src="https://cdn-icons-png.flaticon.com/512/1041/1041888.png" style="width: 45px; margin-bottom: 12px;"/>
-                <h2>Amplop Digital</h2>
-                <p>Doa restu Anda merupakan karunia terindah bagi kami. Namun, apabila Anda ingin memberikan tanda kasih dalam bentuk cashless, Anda dapat menyalurkannya melalui fitur di bawah ini:</p>
-              </div>
-              
-              <div class="amplop-btn-wrapper">
-                <button class="btn-toggle-amplop" id="btnToggleAmplop">
-                  <svg fill="currentColor" height="18" style="margin-right: 8px; vertical-align: middle;" viewBox="0 0 24 24" width="18"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                  Buka Amplop Digital
-                </button>
-              </div>
-
-              <div class="amplop-content" id="amplopContent" style="display: none;">
-                <div class="amplop-cards-container">
-                  <!-- Kartu Bank Transfer -->
-                  <div class="bank-card">
-                    <div class="bank-card-header">
-                      <span class="bank-logo">BANK RAKYAT INDONESIA</span>
-                      <span class="card-chip"></span>
-                    </div>
-                    <div class="bank-card-body">
-                      <p class="account-label">No. Rekening</p>
-                      <div class="account-number-wrapper">
-                        <span class="account-number" id="accNum1">037601016730509</span>
-                        <button class="btn-copy" onclick="copyAccountNo('accNum1')">Salin</button>
-                      </div>
-                    </div>
-                    <div class="bank-card-footer">
-                      <div class="holder-info">
-                        <p class="holder-label">Atas Nama</p>
-                        <p class="holder-name">Diyar Azhari</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="rekening-running-wrapper">
-                  <div class="rekening-running-text">
-                    ⚠️ Hanya Gunakan Nomer Rekening Yang Ada Pada Web Ini ⚠️
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    ⚠️ Atau Tanyakan Langsung Kepada Pengantin Pria ⚠️
-                  </div>
-                </div>
-              </div>
-              
-              <div class="toast-notif" id="toastNotification">No. Rekening berhasil disalin!</div>
-            </div>
-
-            <style>
-              .amplop-digital-section {
-                background: #ffffff;
-                padding: 40px 20px;
-                margin: 25px auto;
-                border-radius: 12px;
-                box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-                max-width: 600px;
-                text-align: center;
-                font-family: 'Inter', sans-serif;
-              }
-              .amplop-header h2 {
-                font-family: 'Great Vibes', cursive;
-                font-size: 38px;
-                color: #a88a5e;
-                margin: 10px 0;
-              }
-              .amplop-header p {
-                font-size: 13.5px;
-                line-height: 1.6;
-                color: #666;
-                margin-bottom: 25px;
-              }
-              .btn-toggle-amplop {
-                background: linear-gradient(135deg, #c5a880 0%, #a88a5e 100%);
-                color: #ffffff;
-                border: none;
-                padding: 12px 28px;
-                font-size: 14px;
-                font-weight: 600;
-                border-radius: 30px;
-                cursor: pointer;
-                box-shadow: 0 4px 12px rgba(168, 138, 94, 0.3);
-                transition: all 0.3s ease;
-                outline: none;
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-              }
-              .btn-toggle-amplop:hover {
-                transform: translateY(-2px);
-                box-shadow: 0 6px 15px rgba(168, 138, 94, 0.4);
-              }
-              .amplop-content {
-                margin-top: 30px;
-                transition: all 0.5s ease-in-out;
-              }
-              .rekening-running-wrapper{
-                width:276px;
-                max-width:500px;
-                margin:20px auto 0;
-                overflow:hidden;
-                background:linear-gradient(135deg, #c5a880 0%, #a88a5e 100%);
-                padding:12px 0;
-                border-radius:10px;
-              }
-              .rekening-running-text{
-                display:inline-block;
-                white-space:nowrap;
-                color:#ffffff;
-                font-family:Consolas, Monaco, monospace;
-                font-size:15px;
-                font-weight:600;
-                padding-left:100%;
-                animation:rekening-running 18s linear infinite;
-              }
-              @keyframes rekening-running{
-                0%{transform:translateX(0);}
-                100%{transform:translateX(-100%);}
-              }
-              .amplop-cards-container {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 20px;
-                justify-content: center;
-                margin-top: 15px;
-              }
-              .bank-card {
-                background: linear-gradient(135deg,#00529c 0%,#0073cf 55%,#00a0e9 100%);
-                color:#fff;
-                width:290px;
-                min-height:180px;
-                border-radius:24px;
-                padding:22px;
-                position:relative;
-                overflow:hidden;
-                box-shadow:0 12px 28px rgba(0,83,156,.30);
-                display:flex;
-                flex-direction:column;
-                justify-content:space-between;
-              }
-              .bank-card::before{
-                content:'';
-                position:absolute;
-                top:-40px;
-                right:-40px;
-                width:140px;
-                height:140px;
-                background:rgba(255,255,255,.12);
-                border-radius:50%;
-              }
-              .bank-logo{
-                font-size:13px;
-                font-weight:700;
-                letter-spacing:.5px;
-                color:#fff;
-              }
-              .card-chip{
-                width:38px;
-                height:28px;
-                border-radius:6px;
-                background:linear-gradient(135deg,#f7c948,#ffe08a);
-              }
-              .account-label,.holder-label{
-                color:rgba(255,255,255,.75);
-                font-size:11px;
-              }
-              .account-number{
-                font-size:24px;
-                font-weight:800;
-                color:#fff;
-                letter-spacing:2px;
-              }
-              .btn-copy{
-                background:#ff7a00;
-                color:#fff;
-                border:none;
-                border-radius:8px;
-                padding:6px 12px;
-                font-size:12px;
-                font-weight:700;
-              }
-              .holder-name{
-                color:#fff;
-                font-size:15px;
-                font-weight:700;
-              }
-              .toast-notif {
-                visibility: hidden;
-                min-width: 200px;
-                background-color: #333;
-                color: #fff;
-                text-align: center;
-                border-radius: 8px;
-                padding: 12px;
-                position: fixed;
-                z-index: 100000;
-                left: 50%;
-                bottom: 80px;
-                transform: translateX(-50%);
-                font-size: 13px;
-                box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-              }
-              .toast-notif.show {
-                visibility: visible;
-                animation: fadein 0.5s, fadeout 0.5s 2.5s;
-              }
-              @keyframes fadein {
-                from {bottom: 60px; opacity: 0;}
-                to {bottom: 80px; opacity: 1;}
-              }
-              @keyframes fadeout {
-                from {bottom: 80px; opacity: 1;}
-                to {bottom: 60px; opacity: 0;}
-              }
-              @media screen and (max-width: 600px) {
-                .amplop-digital-section {
-                  margin: 15px;
-                  padding: 30px 15px;
-                }
-                .amplop-cards-container {
-                  flex-direction: column;
-                  align-items: center;
-                }
-                .bank-card {
-                  width: 100%;
-                  max-width: 280px;
-                }
-              }
-            </style>
-          </div>
-
-          <!-- Music Player Floating -->
-          <div class="widget_item" id="widget_item">
-            <div id="music-player-custom">
-              <button id="music-btn">♬</button>
-              <iframe allow="autoplay" id="soundcloud-player" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/691130521&amp;auto_play=true&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false"></iframe>
-            </div>
-
-            <style>
-              #music-player-custom{position:fixed;left:15px;bottom:95px;z-index:99999;}
-              #music-btn{
-                width:58px;height:58px;border:none;border-radius:50%;
-                background:#a98d65;color:#fff;font-size:24px;cursor:pointer;
-                box-shadow:0 4px 15px rgba(0,0,0,.25);
-                animation:spin 4s linear infinite;
-              }
-              #soundcloud-player{
-                position:absolute;left:-9999px;width:1px;height:1px;border:0;
-              }
-              @keyframes spin{
-                from{transform:rotate(0deg);}
-                to{transform:rotate(360deg);}
-              }
-            </style>
-          </div>
-
-          <!-- RSVP & Bagikan Undangan -->
-          <div class="widget_rsvp" id="widget_rsvp">
-            <!-- Form RSVP -->
-            <div class="rsvp-section-wrapper wow animate__animated animate__fadeInUp" id="rsvp-section">
-              <div class="rsvp-header">
-                <h2>Konfirmasi Kehadiran</h2>
-                <p>FORMULIR KONFIRMASI KEHADIRAN (RSVP)</p>
-              </div>
-              
-              <form class="rsvp-form" id="rsvpForm">
-                <div class="rsvp-form-group">
-                  <label for="rsvpName">Nama Lengkap:</label>
-                  <input class="rsvp-input-text" id="rsvpName" placeholder="Masukkan nama lengkap Anda" required="required" type="text"/>
-                </div>
-                
-                <div class="rsvp-form-group">
-                  <label style="display: block; margin-bottom: 8px;">Apakah Anda akan hadir?</label>
-                  <div class="rsvp-radio-group">
-                    <label class="rsvp-radio-label">
-                      <input name="rsvpAttendance" required="required" type="radio" value="Ya, Saya Akan Hadir"/>
-                      &nbsp;Ya, Saya Akan Hadir
-                    </label>
-                    <label class="rsvp-radio-label">
-                      <input name="rsvpAttendance" required="required" type="radio" value="Maaf, Saya Tidak Bisa Hadir"/>
-                      &nbsp;Maaf, Saya Tidak Bisa Hadir
-                    </label>
-                  </div>
-                </div>
-                
-                <div class="rsvp-form-group">
-                  <label for="rsvpMessage">Ucapan &amp; Doa Restu:</label>
-                  <textarea class="rsvp-textarea" id="rsvpMessage" placeholder="Tuliskan ucapan selamat dan doa restu Anda" required="required" rows="4"></textarea>
-                </div>
-                
-                <button class="btn-submit-rsvp" type="submit">KIRIM KONFIRMASI</button>
-              </form>
-            </div>
-
-            <!-- Bagikan Undangan -->
-            <div class="rsvp-section-wrapper wow animate__animated animate__fadeInUp" id="share-section" style="margin-top: 35px; margin-bottom: 80px;">
-              <div class="rsvp-header">
-                <h2>Bagikan Undangan</h2>
-                <p>KIRIM TAUTAN UNDANGAN RESMI VIA WHATSAPP</p>
-              </div>
-              
-              <form class="rsvp-form" id="shareForm">
-                <div class="rsvp-form-group">
-                  <label for="guestTargetName">Nama Tamu:</label>
-                  <input class="rsvp-input-text" id="guestTargetName" placeholder="Contoh: Bapak Budi Arto" required="required" type="text"/>
-                </div>
-                
-                <div class="rsvp-form-group">
-                  <label for="guestTargetPhone">Nomor WhatsApp Tamu:</label>
-                  <input class="rsvp-input-text" id="guestTargetPhone" placeholder="Contoh: 081234567890" required="required" type="text"/>
-                </div>
-                
-                <button class="btn-submit-rsvp" type="submit">BAGIKAN VIA WHATSAPP</button>
-              </form>
-            </div>
-          </div>
-
-          <!-- Footer -->
-          <footer id="footer" style="background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjepRTwzrefjoi6qzEGKtKxJ5ul8ZfZdEwr83RAOY2ptAIFXAcIpNRcMoYZy5gJb60OIbaAfDosaDq8UWx9et0mhtyqBQlKtW7DzBX8vRg-vucfVumu6rYssLqheeJZNToHwZe7DzXv9IqGwsmUU0PRvRQpbQq1maQRmhdmtXE-Uk-B8znt1zg4d-1K/s1600-rw/background_wedding_footer.png');">
-            <div class="widget-footer">
-              <div class="blogger">
-                <p>Diberdayakan oleh GitHub Pages</p>
-                
-                <div style="position: relative; text-align: center; margin-top: 10px;">
-                    <!-- SCRIPT VERIFICATION ELEMENT (Do Not Remove to Prevent Redirect Lock) -->
-                    <div style="position: absolute; left: -9999px; top: -9999px; opacity: 0; pointer-events: none;">
-                        <strong>Template Blogger by <a class="xnxx" href="https://www.temabanua.com/" id="xnxx" rel="nofollow" style="color:#06c">Temabanua</a></strong>
-                    </div>
-                    
-                    <p style="color: black; margin: 0;">
-                        <strong>Dioptimalkan Untuk Kebutuhan: <a href="https://www.instagram.com/rieazz?igsh=MWJmZDV2eXVob2Vkcg==" style="color: black; text-decoration: underline;">AZMI</a></strong>
-                    </p>
-                </div>
-              </div>
-            </div>
-          </footer>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- Bottom Navbar Navigation -->
-    <div class="bottom-navbar">
-      <button class="bottom-navbar-item active" id="nav-home">
-        <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-        <span>Home</span>
-      </button>
-      <button class="bottom-navbar-item" id="nav-couple">
-        <svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 0 3.58 8.48A5 5 0 1 0 22 12a5 5 0 0 0-9.42-2.48A5 5 0 0 0 9 2zm0 8a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm6 6a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
-        <span>Pengantin</span>
-      </button>
-      <button class="bottom-navbar-item" id="nav-map">
-        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-        <span>Peta Lokasi</span>
-      </button>
-      <button class="bottom-navbar-item" id="nav-gallery">
-        <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
-        <span>Galeri</span>
-      </button>
-      <button class="bottom-navbar-item" id="nav-rsvp">
-        <svg viewBox="0 0 24 24"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
-        <span>RSVP</span>
-      </button>
-    </div>
-
-    <!-- JavaScript Libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" type="text/javascript"></script>
-    <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
-
-    <!-- Interactive Scripts -->
-    <script type="text/javascript">
-      // 1. Inisialisasi WOW.js
-      if (typeof WOW !== 'undefined') {
-          new WOW().init();
-      }
-
-      // 2. Proteksi & Verifikasi Kredit Lisensi Hak Cipta
-      jQuery(document).ready(function($) {
-          if ($('a.xnxx').attr('href') !== 'https://www.temabanua.com/') {
-              window.location.href = 'https://www.temabanua.com/';
-          }
-      });
-
-      // 3. Countdown Timer
-      const second = 1000,
-            minute = second * 60,
-            hour = minute * 60,
-            day = hour * 24;
-
-      const counterMeter = document.querySelector('.counter-meter');
-      if (counterMeter) {
-          let targetDateStr = counterMeter.getAttribute('data-date');
-          if (targetDateStr) {
-              let normalizedDateStr = targetDateStr.trim().replace(/-/g, '/');
-              let countDown = new Date(normalizedDateStr).getTime();
-
-              if (!isNaN(countDown)) {
-                  var countdownInterval = setInterval(function() {
-                      let now = new Date().getTime();
-                      let timeRemaining = countDown - now;
-
-                      let daysEl = document.getElementById('days');
-                      let hoursEl = document.getElementById('hours');
-                      let minutesEl = document.getElementById('minutes');
-                      let secondsEl = document.getElementById('seconds');
-
-                      if (daysEl && hoursEl && minutesEl && secondsEl) {
-                          if (timeRemaining < 0) {
-                              clearInterval(countdownInterval);
-                              daysEl.innerText = "0";
-                              hoursEl.innerText = "0";
-                              minutesEl.innerText = "0";
-                              secondsEl.innerText = "0";
-                          } else {
-                              daysEl.innerText = Math.floor(timeRemaining / day);
-                              hoursEl.innerText = Math.floor((timeRemaining % day) / hour);
-                              minutesEl.innerText = Math.floor((timeRemaining % hour) / minute);
-                              secondsEl.innerText = Math.floor((timeRemaining % minute) / second);
-                          }
-                      }
-                  }, second);
-              } else {
-                  console.error("Format tanggal hitungan mundur tidak valid: ", targetDateStr);
-              }
-          }
-      }
-
-      // 4. Zoom Pop-up Galeri Foto (Magnific Popup)
-      function temabanua_popup() {
-          if (jQuery.fn.magnificPopup) {
-              jQuery('.gallery_zoom').magnificPopup({
-                  delegate: '.zoom',
-                  type: 'image',
-                  gallery: {
-                      enabled: true,
-                      navigateByImgClick: true,
-                      preload: [0,1]
-                  },
-                  removalDelay: 300,
-                  mainClass: 'mfp-fade',
-                  callbacks: {
-                      open: function() {
-                          var mfp = jQuery.magnificPopup.instance;
-                          var startX, startY;
-                          
-                          mfp.wrap.on('touchstart', function(e) {
-                              var touch = e.originalEvent.touches[0];
-                              startX = touch.clientX;
-                              startY = touch.clientY;
-                          });
-                          
-                          mfp.wrap.on('touchend', function(e) {
-                              if (!startX || !startY) return;
-                              var touch = e.originalEvent.changedTouches[0];
-                              var diffX = touch.clientX - startX;
-                              var diffY = touch.clientY - startY;
-                              
-                              if (Math.abs(diffX) > 50 && Math.abs(diffY) < 100) {
-                                  if (diffX > 0) {
-                                      mfp.prev();
-                                  } else {
-                                      mfp.next();
-                                  }
-                              }
-                              startX = null;
-                              startY = null;
-                          });
-                      }
-                  }
-              });
-          }
-      }
-
-      jQuery(document).ready(function() {
-          temabanua_popup();
-      });
-
-      // 5. Soundcloud Music Player Controller
-      document.addEventListener('DOMContentLoaded', function(){
-          var iframe = document.getElementById('soundcloud-player');
-          var btn = document.getElementById('music-btn');
-          if(window.SC && SC.Widget){
-              var widget = SC.Widget(iframe);
-              widget.bind(SC.Widget.Events.READY, function(){
-                  // Sembunyikan musik otomatis sampai cover diklik oleh user
-              });
-              btn.addEventListener('click', function(){
-                  widget.toggle();
-              });
-          }
-      });
-
-      // 6. Proteksi Klik Kanan dan Drag Gambar
-      document.addEventListener('contextmenu', function(e) {
-        if (e.target.tagName === 'IMG' || e.target.closest('.zoom') || e.target.closest('.widget-content-img')) {
-          e.preventDefault();
+        function playBeep(freq, type, duration, vol) {
+            if (audioCtx.state === 'suspended') return;
+            const osc = audioCtx.createOscillator();
+            const gainNode = audioCtx.createGain();
+            
+            osc.connect(gainNode);
+            gainNode.connect(audioCtx.destination);
+            
+            osc.type = type;
+            osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+            
+            gainNode.gain.setValueAtTime(vol, audioCtx.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.00001, audioCtx.currentTime + duration);
+            
+            osc.start();
+            osc.stop(audioCtx.currentTime + duration);
         }
-      }, false);
 
-      document.addEventListener('dragstart', function(e) {
-        if (e.target.tagName === 'IMG' || e.target.closest('.zoom') || e.target.closest('.widget-content-img')) {
-          e.preventDefault();
+        function playSciFiSweep() {
+            if (audioCtx.state === 'suspended') return;
+            const osc = audioCtx.createOscillator();
+            const gainNode = audioCtx.createGain();
+            
+            osc.connect(gainNode);
+            gainNode.connect(audioCtx.destination);
+            
+            osc.type = 'sawtooth';
+            osc.frequency.setValueAtTime(100, audioCtx.currentTime);
+            osc.frequency.exponentialRampToValueAtTime(1200, audioCtx.currentTime + 1.2);
+            
+            gainNode.gain.setValueAtTime(0.15, audioCtx.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.00001, audioCtx.currentTime + 1.2);
+            
+            osc.start();
+            osc.stop(audioCtx.currentTime + 1.2);
         }
-      }, false);
-    </script>
-    
-    <!-- ==================== SYSTEM TRACKING GOOGLE SHEETS START ==================== -->
-    <script type="text/javascript">
-    const CONFIG_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbyPDXvwVbr9M-GWr11ocLnRbA1Gf-eMU1WD5fR9sG7OAMKJ6iHZmH-pnhhSv_i2sj1s/exec';
 
-    const PARSED_GUEST_NAME_CACHE = (function() {
-      const urlParams = new URLSearchParams(window.location.search);
-      return urlParams.get('to') ? urlParams.get('to').replace(/\+/g, ' ') : "Tanpa Nama";
-    })();
+        // Add Hover sounds to interactive elements
+        document.addEventListener("DOMContentLoaded", () => {
+            const interactives = document.querySelectorAll('button, .hud-nav-item, .grid-item, .form-input');
+            interactives.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    playBeep(880, 'sine', 0.08, 0.03);
+                });
+            });
+        });
 
-    async function getDeviceDetails() {
-      const ua = navigator.userAgent;
-      let browser = "Browser HP / Webview";
-      let device = "Desktop / PC";
-      let os = "Tidak Diketahui";
+        // ==================== SYSTEM HANDLERS ====================
+        function initializeSystem() {
+            // Chrome-compliant Audio activation
+            audioCtx.resume().then(() => {
+                playSciFiSweep();
+                
+                const gateway = document.getElementById('gateway-screen');
+                gateway.classList.add('deactivated');
+                
+                // Initialize Terminal Typing after access
+                setTimeout(startTerminalTyping, 1000);
+            });
+        }
 
-      const isMobile = /Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(ua);
-
-      if (navigator.userAgentData && navigator.userAgentData.platform) {
-        os = navigator.userAgentData.platform;
-      } else {
-        if (/android/i.test(ua)) os = "Android";
-        else if (/iphone|ipad|ipod/i.test(ua)) os = "iOS";
-        else if (/windows/i.test(ua)) os = "Windows";
-        else if (/macintosh|mac os x/i.test(ua)) os = "macOS";
-        else if (/cros/i.test(ua)) os = "Chrome OS";
-        else if (/linux/i.test(ua)) os = "Linux";
-      }
-
-      const lUa = ua.toLowerCase();
-      if (lUa.indexOf("ucbrowser") > -1) {
-        browser = "UC Browser";
-      } 
-      else if (lUa.indexOf("miuibrowser") > -1) {
-        browser = "Miui Browser (Xiaomi)";
-      } 
-      else if (lUa.indexOf("instagram") > -1) {
-        browser = "Instagram App";
-      } 
-      else if (lUa.indexOf("fb_iab") > -1 || lUa.indexOf("fb4a") > -1 || lUa.indexOf("fbav") > -1) {
-        browser = "Facebook App";
-      } 
-      else if (lUa.indexOf("tiktok") > -1) {
-        browser = "TikTok App";
-      } 
-      else if (lUa.indexOf("line/") > -1) {
-        browser = "LINE App";
-      } 
-      else if (lUa.indexOf("samsungbrowser") > -1) {
-        browser = "Samsung Browser";
-      } 
-      else if (lUa.indexOf("opera") > -1 || lUa.indexOf("opr") > -1) {
-        browser = "Opera";
-      } 
-      else if (lUa.indexOf("edge") > -1 || lUa.indexOf("edg") > -1) {
-        browser = "Microsoft Edge";
-      } 
-      else if (lUa.indexOf("; wv") > -1 || lUa.indexOf(" wv)") > -1 || lUa.indexOf("webview") > -1) {
-        browser = "In-App Browser (WebView)";
-      } 
-      else if (lUa.indexOf("chrome") > -1 || lUa.indexOf("crios") > -1) {
-        browser = "Google Chrome";
-      } 
-      else if (lUa.indexOf("safari") > -1) {
-        browser = "Apple Safari";
-      } 
-      else if (isMobile) {
-        browser = "Mobile Browser (Bawaan HP)";
-      } 
-      else {
-        browser = "Desktop Browser (Bawaan PC)";
-      }
-
-      if (isMobile) {
-        let brand = "Mobile Device";
-        let model = "";
-
-        if (navigator.userAgentData) {
-          try {
-            const highEntropy = await navigator.userAgentData.getHighEntropyValues(["model"]);
-            if (highEntropy && highEntropy.model) {
-              model = highEntropy.model;
+        function scrollToSec(id, btn) {
+            playBeep(660, 'triangle', 0.1, 0.05);
+            
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
             }
-          } catch (e) {
-            console.warn("Client Hints tidak didukung browser ini, beralih ke UserAgent.");
-          }
+
+            document.querySelectorAll('.hud-nav-item').forEach(item => item.classList.remove('active'));
+            btn.classList.add('active');
         }
 
-        if (!model || model === "K") {
-          if (/Android/i.test(ua)) {
-            const match = ua.match(/Android\s+([^\s;]+);\s+([^;)]+)/);
-            if (match && match[2]) {
-              model = match[2].trim();
+        function handleUplinkSubmit(e) {
+            e.preventDefault();
+            playBeep(1200, 'sine', 0.5, 0.1);
+            
+            const caller = document.getElementById('caller').value;
+            alert(`Broadcasting secure packet from [${caller}]. Connection simulated successfully.`);
+            document.getElementById('uplinkForm').reset();
+        }
+
+        // ==================== TERMINAL EMULATION SCRIPT ====================
+        const terminalCommands = [
+            "fetching quantum_crypt_link...",
+            "establishing link protocols over secure gateways...",
+            "initial_handshake: SUCCESSFUL (Sec_9 status)",
+            "loading neural cores and defense frameworks...",
+            "WARNING: bypass algorithms detected. Shield protocols updated.",
+            "session ready. welcome user to the node."
+        ];
+
+        function startTerminalTyping() {
+            const termElement = document.getElementById('typed-command');
+            let commandIndex = 0;
+            let charIndex = 0;
+            let currentText = "";
+            let isDeleting = false;
+
+            function type() {
+                const fullText = terminalCommands[commandIndex];
+                
+                if (isDeleting) {
+                    currentText = fullText.substring(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    currentText = fullText.substring(0, charIndex + 1);
+                    charIndex++;
+                }
+
+                termElement.innerHTML = currentText + "<span style='animation: blink 0.7s infinite;'>_</span>";
+
+                let typingSpeed = 50;
+                if (isDeleting) { typingSpeed /= 2; }
+
+                if (!isDeleting && currentText === fullText) {
+                    typingSpeed = 2000; // Pause at full text
+                    isDeleting = true;
+                    playBeep(440, 'square', 0.1, 0.02);
+                } else if (isDeleting && currentText === "") {
+                    isDeleting = false;
+                    commandIndex = (commandIndex + 1) % terminalCommands.length;
+                    typingSpeed = 500; // Delay before next text
+                } else {
+                    // Quick beep sound mimicking terminal sound
+                    if(charIndex % 3 === 0) {
+                        playBeep(1000, 'sine', 0.01, 0.01);
+                    }
+                }
+
+                setTimeout(type, typingSpeed);
             }
-          }
+
+            type();
         }
 
-        const searchString = (ua + " " + model).toLowerCase();
+        // ==================== LIGHTWEIGHT NODE PARTICLE NETWORK ====================
+        const canvas = document.getElementById('particle-canvas');
+        const ctx = canvas.getContext('2d');
 
-        if (/iphone|ipad|ipod/i.test(searchString)) {
-          brand = "Apple";
-          if (!model || model === "K") model = "iPhone";
+        let particlesArray = [];
+        const maxParticles = 60;
+
+        function setCanvasSize() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
         }
-        else if (/samsung|sm-[a-z0-9]+/i.test(searchString)) {
-          brand = "Samsung";
-        }
-        else if (/oppo|cph|pcfm|pact/i.test(searchString)) {
-          brand = "Oppo";
-        }
-        else if (/vivo|v2[0-9]+|v1[0-9]+/i.test(searchString)) {
-          brand = "Vivo";
-        }
-        else if (/xiaomi|redmi|poco|mi\s|m200|m210|m211|m2103/i.test(searchString)) {
-          brand = "Xiaomi / Redmi / POCO";
-        }
-        else if (/realme|rmx[0-9]+/i.test(searchString)) {
-          brand = "Realme";
-        }
-        else if (/infinix|x6[0-9]+/i.test(searchString)) {
-          brand = "Infinix";
-        }
-        else if (/huawei/i.test(searchString)) {
-          brand = "Huawei";
-        }
-        else if (/asus/i.test(searchString)) {
-          brand = "Asus";
-        }
-        else if (/pixel/i.test(searchString)) {
-          brand = "Google Pixel";
-        }
-        else if (/sony/i.test(searchString)) {
-          brand = "Sony";
-        }
+        setCanvasSize();
+        window.addEventListener('resize', setCanvasSize);
 
-        device = model && model !== "K" ? brand + " (" + model + ")" : brand;
-      }
-
-      return { browser: browser, device: device, os: os };
-    }
-
-    async function sendTrackingData(actionName) {
-      let ipAddress = "IP Tidak Diketahui";
-      
-      try {
-        const response = await fetch('https://api.ipify.org?format=json');
-        const data = await response.json();
-        ipAddress = data.ip;
-      } catch (err) {
-        console.warn("Gagal mengambil IP, data akan dikirim tanpa informasi IP.");
-      }
-
-      const info = await getDeviceDetails();
-      const currentPage = window.location.href;
-      const guestName = PARSED_GUEST_NAME_CACHE;
-
-      const clickKey = 'tracking_clicks_' + actionName.replace(/[^a-zA-Z0-9]/g, '_').toLowerCase();
-      let clickCount = parseInt(localStorage.getItem(clickKey) || '0');
-      clickCount++;
-      localStorage.setItem(clickKey, clickCount);
-
-      const payload = {
-        ip: ipAddress,
-        device: info.device,
-        browser: info.browser,
-        os: info.os,
-        guestName: guestName, 
-        page: currentPage,
-        clickCount: clickCount,
-        action: actionName 
-      };
-
-      if (CONFIG_WEB_APP_URL) {
-        fetch(CONFIG_WEB_APP_URL, {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(payload)
-        }).catch(err => console.error("Tracking Error:", err));
-      }
-    }
-
-    document.addEventListener("DOMContentLoaded", function() {
-      setTimeout(function() {
-        if (typeof sendTrackingData === 'function') {
-          sendTrackingData("Membuka Link Undangan");
-        }
-      }, 300);
-
-      const targetBtn = document.getElementById("btnToggleAmplop");
-      if (targetBtn) {
-        targetBtn.addEventListener("click", function() {
-          const content = document.getElementById("amplopContent");
-          if (content && content.style.display === "none") {
-            sendTrackingData("Buka Amplop");
-          }
-        });
-      }
-
-      const mapsBtn = document.getElementById("btnLihatLokasi");
-      if (mapsBtn) {
-        mapsBtn.addEventListener("click", function() {
-          sendTrackingData("Lihat Lokasi (Google Maps)");
-        });
-      }
-    });
-    </script>
-    <!-- ==================== SYSTEM TRACKING GOOGLE SHEETS END ==================== -->
-
-    <!-- ==================== COVER LOGIC & AUTO PLAY MUSIC ==================== -->
-    <script type="text/javascript">
-    document.addEventListener("DOMContentLoaded", function() {
-      document.body.classList.add("lock-scroll");
-
-      const urlParams = new URLSearchParams(window.location.search);
-      let guestName = urlParams.get('to') ? urlParams.get('to').replace(/\+/g, ' ') : "Tamu Undangan";
-      const guestEl = document.getElementById("cover-guest-name");
-      if (guestEl) {
-        guestEl.innerText = guestName;
-      }
-
-      const btnOpen = document.getElementById("btn-open-invitation");
-      const cover = document.getElementById("wedding-cover");
-      
-      if (btnOpen && cover) {
-        btnOpen.addEventListener("click", function() {
-          cover.classList.add("fade-out");
-          document.body.classList.remove("lock-scroll");
-          
-          if (typeof sendTrackingData === 'function') {
-            sendTrackingData("Buka Undangan (Cover)");
-          }
-
-          var iframe = document.getElementById('soundcloud-player');
-          if (iframe && window.SC && SC.Widget) {
-            var widget = SC.Widget(iframe);
-            widget.play();
-          }
-        });
-      }
-    });
-    </script>
-
-    <!-- ==================== TAB BAR INTERACTION & RSVP FORMS ==================== -->
-    <script type="text/javascript">
-    document.addEventListener("DOMContentLoaded", function() {
-      const urlParams = new URLSearchParams(window.location.search);
-      let customPhone = urlParams.get('phone') || urlParams.get('num') || urlParams.get('wa');
-      
-      if (customPhone) {
-        customPhone = customPhone.replace(/[^0-9]/g, '');
-        if (customPhone.startsWith('0')) {
-          customPhone = '62' + customPhone.substring(1);
-        }
-        sessionStorage.setItem('target_wa_phone', customPhone);
-      }
-
-      // Tab selector
-      const navHome = document.getElementById("nav-home");
-      const navCouple = document.getElementById("nav-couple");
-      const navMap = document.getElementById("nav-map");
-      const navGallery = document.getElementById("nav-gallery");
-      const navRsvp = document.getElementById("nav-rsvp");
-
-      const navItems = [navHome, navCouple, navMap, navGallery, navRsvp];
-
-      function setActiveTab(activeItem) {
-        navItems.forEach(item => {
-          if (item) item.classList.remove("active");
-        });
-        if (activeItem) activeItem.classList.add("active");
-      }
-
-      if (navHome) {
-        navHome.addEventListener("click", function(e) {
-          e.preventDefault();
-          setActiveTab(navHome);
-          const cover = document.getElementById("wedding-cover");
-          if (cover) {
-            cover.classList.remove("fade-out");
-            document.body.classList.add("lock-scroll");
-          }
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-      }
-
-      if (navCouple) {
-        navCouple.addEventListener("click", function(e) {
-          e.preventDefault();
-          setActiveTab(navCouple);
-          const target = document.getElementById("widget_user");
-          if (target) {
-            target.scrollIntoView({ behavior: "smooth" });
-          }
-        });
-      }
-
-      if (navMap) {
-        navMap.addEventListener("click", function(e) {
-          e.preventDefault();
-          setActiveTab(navMap);
-          const target = document.getElementById("widget_item-map");
-          if (target) {
-            target.scrollIntoView({ behavior: "smooth" });
-          }
-        });
-      }
-
-      if (navGallery) {
-        navGallery.addEventListener("click", function(e) {
-          e.preventDefault();
-          setActiveTab(navGallery);
-          const target = document.getElementById("widget_image_text");
-          if (target) {
-            target.scrollIntoView({ behavior: "smooth" });
-          }
-        });
-      }
-
-      if (navRsvp) {
-        navRsvp.addEventListener("click", function(e) {
-          e.preventDefault();
-          setActiveTab(navRsvp);
-          const target = document.getElementById("rsvp-section");
-          if (target) {
-            target.scrollIntoView({ behavior: "smooth" });
-          }
-        });
-      }
-
-      // Intersection Observer
-      if ('IntersectionObserver' in window) {
-        const observerOptions = {
-          root: null,
-          rootMargin: '0px',
-          threshold: 0.3
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const id = entry.target.id;
-              if (id === 'widget_user') setActiveTab(navCouple);
-              else if (id === 'widget_item-map') setActiveTab(navMap);
-              else if (id === 'widget_image_text') setActiveTab(navGallery);
-              else if (id === 'rsvp-section') setActiveTab(navRsvp);
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 1;
+                this.speedX = (Math.random() - 0.5) * 0.4;
+                this.speedY = (Math.random() - 0.5) * 0.4;
             }
-          });
-        }, observerOptions);
 
-        const targetSections = [
-          document.getElementById('widget_user'),
-          document.getElementById('widget_item-map'),
-          document.getElementById('widget_image_text'),
-          document.getElementById('rsvp-section')
-        ].filter(Boolean);
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
 
-        targetSections.forEach(section => observer.observe(section));
-      }
+                if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+            }
 
-      // RSVP Form Submit
-      const rsvpForm = document.getElementById("rsvpForm");
-      if (rsvpForm) {
-        rsvpForm.addEventListener("submit", function(e) {
-          e.preventDefault();
-          const rsvpName = document.getElementById("rsvpName").value;
-          const rsvpAttendance = document.querySelector('input[name="rsvpAttendance"]:checked').value;
-          const rsvpMessage = document.getElementById("rsvpMessage").value;
-
-          if (typeof sendTrackingData === 'function') {
-            sendTrackingData("Kirim RSVP | Nama: " + rsvpName + " | Kehadiran: " + rsvpAttendance + " | Ucapan: " + rsvpMessage);
-          }
-
-          alert("Terima kasih! Konfirmasi kehadiran dan doa restu Anda telah berhasil kami terima.");
-          rsvpForm.reset();
-        });
-      }
-
-      // Share Form Submit
-      const shareForm = document.getElementById("shareForm");
-      if (shareForm) {
-        shareForm.addEventListener("submit", function(e) {
-          e.preventDefault();
-          const guestName = document.getElementById("guestTargetName").value;
-          let guestPhone = document.getElementById("guestTargetPhone").value;
-
-          guestPhone = guestPhone.replace(/[^0-9]/g, '');
-          if (guestPhone.startsWith('0')) {
-            guestPhone = '62' + guestPhone.substring(1);
-          }
-
-          const baseUrl = window.location.origin + window.location.pathname;
-          const targetRsvpPhone = sessionStorage.getItem('target_wa_phone');
-
-          let customInviteUrl = baseUrl + "?to=" + encodeURIComponent(guestName);
-          if (targetRsvpPhone) {
-            customInviteUrl += "&phone=" + targetRsvpPhone;
-          }
-
-          const inviteMessage = "Kepada Yth.\n" +
-                                "*Bapak/Ibu/Saudara/i " + guestName + "*\n\n" +
-                                "Tanpa mengurangi rasa hormat, perkenankan kami mengundang Anda untuk berkenan hadir dan memberikan doa restu pada acara pernikahan kami. Berikut detail undangan digital kami:\n\n" +
-                                customInviteUrl + "\n\n" +
-                                "Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Anda berkenan hadir. Terima kasih.";
-
-          const encodedInviteMessage = encodeURIComponent(inviteMessage);
-          const waShareUrl = "https://api.whatsapp.com/send?phone=" + guestPhone + "&text=" + encodedInviteMessage;
-
-          window.open(waShareUrl, '_blank');
-        });
-      }
-    });
-
-    // Toggle Amplop Digital
-    document.addEventListener("DOMContentLoaded", function() {
-      var btnToggle = document.getElementById("btnToggleAmplop");
-      var content = document.getElementById("amplopContent");
-      
-      if (btnToggle && content) {
-        btnToggle.addEventListener("click", function() {
-          if (content.style.display === "none") {
-            content.style.display = "block";
-            btnToggle.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style="margin-right: 8px; vertical-align: middle;"><path d="M18 15c-1.1 0-2 .9-2 2v2H4v-6h12v2c0 1.1.9 2 2 2zm2-10H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-2 4h-4V7h4v2z"/></svg> Tutup Amplop Digital';
-          } else {
-            content.style.display = "none";
-            btnToggle.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style="margin-right: 8px; vertical-align: middle;"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg> Buka Amplop Digital';
-          }
-        });
-      }
-    });
-
-    function copyAccountNo(elementId) {
-      var text = document.getElementById(elementId).innerText;
-      navigator.clipboard.writeText(text).then(function() {
-        var toast = document.getElementById("toastNotification");
-        if (toast) {
-          toast.className = "toast-notif show";
-          setTimeout(function() {
-            toast.className = toast.className.replace("show", "");
-          }, 3000);
+            draw() {
+                ctx.fillStyle = 'rgba(0, 240, 255, 0.5)';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
         }
-        if (typeof sendTrackingData === 'function') {
-          sendTrackingData("Salin Rekening (" + text + ")");
-        }
-      }).catch(function(err) {
-        console.error('Gagal menyalin teks: ', err);
-      });
-    }
-    </script>
 
-    <!-- ==================== CLEAN URL FROM PARAMS AFTER LOAD ==================== -->
-    <script type="text/javascript">
-    window.addEventListener('load', function() {
-      setTimeout(function() {
-        if (window.history.replaceState) {
-          window.history.replaceState({}, document.title, window.location.pathname);
+        function initParticles() {
+            particlesArray = [];
+            for (let i = 0; i < maxParticles; i++) {
+                particlesArray.push(new Particle());
+            }
         }
-      }, 1500); 
-    });
+        initParticles();
+
+        function connectParticles() {
+            let opacityValue = 1;
+            for (let a = 0; a < particlesArray.length; a++) {
+                for (let b = a; b < particlesArray.length; b++) {
+                    let dist = Math.hypot(particlesArray[a].x - particlesArray[b].x, particlesArray[a].y - particlesArray[b].y);
+                    if (dist < 130) {
+                        opacityValue = 1 - (dist / 130);
+                        ctx.strokeStyle = `rgba(0, 240, 255, ${opacityValue * 0.15})`;
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+                        ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+                        ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particlesArray.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            connectParticles();
+            requestAnimationFrame(animateParticles);
+        }
+        animateParticles();
     </script>
 </body>
 </html>
