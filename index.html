@@ -745,37 +745,40 @@
                     <p class="profile-desc">Putra Kedua dari Alm. Bapak Dja &amp; Almh. Ibu Sri</p>
                 </div>
 
-                <!-- Interactive Git Merge Animation Visualizer -->
-                <div class="merge-canvas-wrapper">
-                    <svg width="100%" height="80" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Background Line -->
-                        <path d="M 10,20 L 150,20 Q 200,20 220,40" fill="none" stroke="rgba(20, 184, 166, 0.2)" stroke-width="2" />
-                        <path d="M 10,60 L 150,60 Q 200,60 220,40" fill="none" stroke="rgba(20, 184, 166, 0.2)" stroke-width="2" />
-                        <path d="M 220,40 L 290,40" fill="none" stroke="rgba(255, 255, 255, 0.2)" stroke-width="2" />
+               <!-- Interactive Git Merge Animation Visualizer -->
+<div class="merge-canvas-wrapper">
+    <svg width="100%" height="80" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+        <!-- Background Line -->
+        <path d="M 10,20 L 150,20 Q 200,20 220,40" fill="none" stroke="rgba(20, 184, 166, 0.2)" stroke-width="2" />
+        <!-- Mengubah stroke background line nadia_branch menjadi kuning transparan -->
+        <path d="M 10,60 L 150,60 Q 200,60 220,40" fill="none" stroke="rgba(250, 204, 21, 0.2)" stroke-width="2" />
+        <path d="M 220,40 L 290,40" fill="none" stroke="rgba(255, 255, 255, 0.2)" stroke-width="2" />
 
-                        <!-- Animated glowing lines -->
-                        <path id="path-pria" d="M 10,20 L 150,20 Q 200,20 220,40" fill="none" stroke="var(--indigo-glow)" stroke-width="2" stroke-dasharray="8 150" stroke-dashoffset="0">
-                            <animate attributeName="stroke-dashoffset" values="150;0" dur="3s" repeatCount="indefinite" />
-                        </path>
-                        <path id="path-wanita" d="M 10,60 L 150,60 Q 200,60 220,40" fill="none" stroke="var(--teal-accent)" stroke-width="2" stroke-dasharray="8 150" stroke-dashoffset="0">
-                            <animate attributeName="stroke-dashoffset" values="150;0" dur="3s" repeatCount="indefinite" />
-                        </path>
-                        <path id="path-merge" d="M 220,40 L 290,40" fill="none" stroke="#ffffff" stroke-width="2" stroke-dasharray="10 80" stroke-dashoffset="0">
-                            <animate attributeName="stroke-dashoffset" values="90;0" dur="2s" repeatCount="indefinite" />
-                        </path>
+        <!-- Animated glowing lines -->
+        <path id="path-pria" d="M 10,20 L 150,20 Q 200,20 220,40" fill="none" stroke="var(--indigo-glow)" stroke-width="2" stroke-dasharray="8 150" stroke-dashoffset="0">
+            <animate attributeName="stroke-dashoffset" values="150;0" dur="3s" repeatCount="indefinite" />
+        </path>
+        <!-- Mengubah stroke animasi path-wanita (nadia_branch) menjadi kuning (#facc15) -->
+        <path id="path-wanita" d="M 10,60 L 150,60 Q 200,60 220,40" fill="none" stroke="#facc15" stroke-width="2" stroke-dasharray="8 150" stroke-dashoffset="0">
+            <animate attributeName="stroke-dashoffset" values="150;0" dur="3s" repeatCount="indefinite" />
+        </path>
+        <path id="path-merge" d="M 220,40 L 290,40" fill="none" stroke="#ffffff" stroke-width="2" stroke-dasharray="10 80" stroke-dashoffset="0">
+            <animate attributeName="stroke-dashoffset" values="90;0" dur="2s" repeatCount="indefinite" />
+        </path>
 
-                        <!-- Nodes -->
-                        <circle cx="10" cy="20" r="4" fill="var(--indigo-glow)" />
-                        <circle cx="10" cy="60" r="4" fill="var(--teal-accent)" />
-                        <circle cx="220" cy="40" r="5" fill="#ffffff" />
-                        <circle cx="290" cy="40" r="4" fill="#ffffff" />
+        <!-- Nodes -->
+        <circle cx="10" cy="20" r="4" fill="var(--indigo-glow)" />
+        <!-- Mengubah warna titik node nadia_branch menjadi kuning (#facc15) -->
+        <circle cx="10" cy="60" r="4" fill="#facc15" />
+        <circle cx="220" cy="40" r="5" fill="#ffffff" />
+        <circle cx="290" cy="40" r="4" fill="#ffffff" />
 
-                        <!-- Labels -->
-                        <text x="20" y="14" fill="var(--text-secondary)" font-family="JetBrains Mono" font-size="9">arie_branch</text>
-                        <text x="20" y="72" fill="var(--text-secondary)" font-family="JetBrains Mono" font-size="9">nadia_branch</text>
-                        <text x="230" y="32" fill="#ffffff" font-family="JetBrains Mono" font-size="9">main (merged)</text>
-                    </svg>
-                </div>
+        <!-- Labels -->
+        <text x="20" y="14" fill="var(--text-secondary)" font-family="JetBrains Mono" font-size="9">arie_branch</text>
+        <text x="20" y="72" fill="var(--text-secondary)" font-family="JetBrains Mono" font-size="9">nadia_branch</text>
+        <text x="230" y="32" fill="#ffffff" font-family="JetBrains Mono" font-size="9">main (merged)</text>
+    </svg>
+</div>
 
                 <!-- Bride -->
                 <div class="profile-card">
