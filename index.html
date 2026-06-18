@@ -3,27 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diyar &amp; Ratna Wedding | Cybernetic Invitation</title>
+    <title>Arie &amp; Nadia Wedding | System Integration</title>
     
-    <!-- Meta Tags -->
-    <meta content="Diyar &amp; Ratna Wedding | Undangan Pernikahan Resmi" name="title"/>
-    <meta content="Undangan pernikahan digital bertema teknologi untuk Diyar Azhari, S.Pd. &amp; Ratna Rahyu, S.Sos." name="description"/>
-
-    <!-- Google Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Share+Tech+Mono&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
 
     <style>
         :root {
-            --bg-color: #030712;
-            --primary-neon: #00f0ff;
-            --secondary-neon: #bd00ff;
-            --dark-surface: rgba(10, 15, 30, 0.75);
-            --border-neon: rgba(0, 240, 255, 0.2);
-            --text-main: #e2e8f0;
-            --text-mute: #94a3b8;
+            --bg-obsidian: #090a0f;
+            --indigo-glow: #6366f1;
+            --teal-accent: #14b8a6;
+            --slate-gray: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --glass-bg: rgba(15, 23, 42, 0.65);
+            --glass-border: rgba(255, 255, 255, 0.07);
         }
 
         * {
@@ -33,11 +29,168 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-obsidian);
+            color: var(--text-primary);
             overflow-x: hidden;
             scroll-behavior: smooth;
+        }
+
+        /* Ambient Background Grid & Glows */
+        .bg-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(rgba(99, 102, 241, 0.15) 1px, transparent 1px);
+            background-size: 30px 30px;
+            z-index: -2;
+        }
+
+        .bg-glow-1 {
+            position: fixed;
+            top: -20%;
+            left: -10%;
+            width: 60vw;
+            height: 60vw;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, transparent 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .bg-glow-2 {
+            position: fixed;
+            bottom: -20%;
+            right: -10%;
+            width: 50vw;
+            height: 50vw;
+            background: radial-gradient(circle, rgba(20, 184, 166, 0.08) 0%, transparent 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* ==================== OS LOCKSCREEN COVER ==================== */
+        #lockscreen-cover {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, #11131e 0%, #05060a 100%);
+            z-index: 99999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 1.2s cubic-bezier(0.85, 0, 0.15, 1), opacity 1s ease;
+        }
+
+        #lockscreen-cover.unlocked {
+            transform: translateY(-100%);
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .lock-card {
+            width: 90%;
+            max-width: 440px;
+            background: rgba(15, 23, 42, 0.45);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 28px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .system-status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: var(--indigo-glow);
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+
+        .system-status-pill span::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: var(--teal-accent);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--teal-accent);
+            margin-right: 6px;
+        }
+
+        .couple-display {
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+            font-style: italic;
+            font-weight: 600;
+            letter-spacing: -1px;
+            margin-bottom: 15px;
+        }
+
+        .couple-display span {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-style: normal;
+            font-size: 24px;
+            color: var(--indigo-glow);
+            display: block;
+            margin: 5px 0;
+        }
+
+        .guest-box {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 16px;
+            padding: 15px;
+            margin: 25px 0 35px 0;
+        }
+
+        .guest-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-secondary);
+            margin-bottom: 5px;
+        }
+
+        .guest-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .btn-authenticate {
+            width: 100%;
+            background: linear-gradient(135deg, var(--indigo-glow) 0%, #4f46e5 100%);
+            color: #ffffff;
+            border: none;
+            border-radius: 14px;
+            padding: 16px;
+            font-weight: 600;
+            font-size: 13px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-authenticate:hover {
+            opacity: 0.95;
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.35);
         }
 
         body.lock-scroll {
@@ -45,840 +198,775 @@
             height: 100vh !important;
         }
 
-        /* Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #030712;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: var(--primary-neon);
-            border-radius: 4px;
-        }
-
-        /* Canvas Particle Background */
-        #particle-canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            pointer-events: none;
-        }
-
-        /* ==================== CYBER COVERS / SPLASH SCREEN ==================== */
-        #wedding-cover {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, #090d1a 0%, #02040a 100%);
-            z-index: 999999;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Share Tech Mono', monospace;
-            transition: transform 1.2s cubic-bezier(0.85, 0, 0.15, 1), opacity 0.8s ease;
-            text-align: center;
-        }
-
-        #wedding-cover.fade-out {
-            transform: translateY(-100%);
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .cover-box {
-            max-width: 500px;
-            width: 90%;
-            padding: 40px 20px;
-            border: 1px solid var(--primary-neon);
-            background: rgba(3, 7, 18, 0.9);
-            box-shadow: 0 0 35px rgba(0, 240, 255, 0.15);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cover-box::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 50%;
-            height: 100%;
-            background: linear-gradient(to right, transparent, rgba(0, 240, 255, 0.1), transparent);
-            animation: sweep 4s infinite linear;
-        }
-
-        @keyframes sweep {
-            0% { left: -100%; }
-            50% { left: 150%; }
-            100% { left: 150%; }
-        }
-
-        .cover-subtitle {
-            font-size: 11px;
-            letter-spacing: 5px;
-            color: var(--primary-neon);
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
-
-        .cover-names {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 32px;
-            font-weight: 900;
-            margin: 15px 0;
-            background: linear-gradient(to right, #ffffff, var(--primary-neon));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .cover-to {
-            font-size: 10px;
-            letter-spacing: 2px;
-            color: var(--text-mute);
-            margin-top: 25px;
-            margin-bottom: 5px;
-        }
-
-        .cover-guest {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 18px;
-            color: #ffffff;
-            margin-bottom: 30px;
-            text-shadow: 0 0 10px rgba(255,255,255,0.3);
-        }
-
-        .btn-open-system {
-            background: transparent;
-            color: var(--primary-neon);
-            border: 1px solid var(--primary-neon);
-            padding: 12px 35px;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 11px;
-            font-weight: bold;
-            letter-spacing: 2px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .btn-open-system:hover {
-            background: var(--primary-neon);
-            color: var(--bg-color);
-            box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
-        }
-
-        /* ==================== CORE CONTENT SYSTEM ==================== */
-        .app-container {
+        /* ==================== MAIN INTERFACE ==================== */
+        .interface-grid {
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 30px 15px 120px 15px;
             position: relative;
             z-index: 10;
-            max-width: 680px;
-            margin: 0 auto;
-            padding: 40px 15px 120px 15px;
         }
 
-        /* HUD Header */
-        .hud-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px dashed var(--border-neon);
-            padding-bottom: 15px;
-            margin-bottom: 40px;
-            font-family: 'Share Tech Mono', monospace;
-            color: var(--primary-neon);
-            font-size: 11px;
-        }
-
-        .sys-info {
-            display: flex;
-            gap: 20px;
-        }
-
-        /* Cyber Glass Cards */
-        .tech-card {
-            background: var(--dark-surface);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid var(--border-neon);
-            padding: 30px 20px;
-            margin-bottom: 35px;
-            position: relative;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        }
-
-        /* Cyber corners */
-        .tech-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 15px;
-            height: 1px;
-            background: var(--primary-neon);
-        }
-
-        .tech-card::after {
-            content: '';
-            position: absolute;
-            top: -1px;
-            right: -1px;
-            border-width: 0 12px 12px 0;
-            border-style: solid;
-            border-color: transparent var(--bg-color) transparent transparent;
-            display: block;
-            width: 0;
-        }
-
-        .sec-title {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 20px;
-            letter-spacing: 2px;
-            color: #ffffff;
+        /* Glassmorphic Panel Card */
+        .glass-panel {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 30px;
             margin-bottom: 25px;
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.4);
+        }
+
+        .panel-header {
             display: flex;
             align-items: center;
-            gap: 12px;
-            text-transform: uppercase;
-        }
-
-        .sec-title i {
-            color: var(--primary-neon);
-            font-size: 16px;
-        }
-
-        /* Quote text styling */
-        .quote-box {
-            font-size: 14px;
-            line-height: 1.8;
-            color: var(--text-main);
-            text-align: center;
-            font-style: italic;
-        }
-
-        /* Profile Grid (Couple) */
-        .couple-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-            align-items: center;
-        }
-
-        .profile-node {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            max-width: 300px;
-        }
-
-        .avatar-frame {
-            position: relative;
-            width: 200px;
-            height: 200px;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 15px;
             margin-bottom: 20px;
         }
 
-        .avatar-circle {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            padding: 6px;
-            background: #000;
-            border: 2px solid var(--primary-neon);
-            overflow: hidden;
-            box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
-            transition: all 0.5s;
-        }
-
-        .avatar-circle:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 0 30px rgba(0, 240, 255, 0.4);
-            border-color: var(--secondary-neon);
-        }
-
-        .avatar-img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .node-name {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 18px;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 8px;
-        }
-
-        .node-details {
-            font-size: 13.5px;
-            color: var(--text-mute);
-            line-height: 1.6;
-        }
-
-        /* Countdown Reactor System */
-        .reactor-countdown {
+        .panel-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: var(--text-secondary);
             display: flex;
-            justify-content: space-around;
-            margin: 25px 0;
-            font-family: 'Share Tech Mono', monospace;
-        }
-
-        .reactor-node {
-            display: flex;
-            flex-direction: column;
             align-items: center;
-            background: rgba(1, 4, 9, 0.6);
-            border: 1px solid var(--border-neon);
-            padding: 10px;
-            min-width: 65px;
-        }
-
-        .reactor-val {
-            font-size: 24px;
-            font-weight: bold;
-            color: var(--primary-neon);
-        }
-
-        .reactor-lbl {
-            font-size: 11px;
-            color: var(--text-mute);
-            margin-top: 4px;
-        }
-
-        /* Photo Grid */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 160px;
-            object-fit: cover;
-            border: 1px solid var(--border-neon);
-            transition: all 0.3s;
-        }
-
-        .gallery-item img:hover {
-            border-color: var(--primary-neon);
-            transform: scale(1.02);
-        }
-
-        /* Envelope / Digital Wallet */
-        .bank-card {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            border: 1px solid var(--border-neon);
-            border-radius: 16px;
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 320px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-        }
-
-        .bank-logo {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 12px;
-            color: var(--primary-neon);
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-        }
-
-        .account-number {
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 20px;
-            font-weight: bold;
-            color: #ffffff;
-            margin: 10px 0;
-            letter-spacing: 1.5px;
-        }
-
-        .copy-btn {
-            background: transparent;
-            color: var(--primary-neon);
-            border: 1px solid var(--primary-neon);
-            padding: 4px 10px;
-            font-size: 11px;
-            font-family: 'Share Tech Mono', monospace;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .copy-btn:hover {
-            background: var(--primary-neon);
-            color: var(--bg-color);
-        }
-
-        .toast-notif {
-            visibility: hidden;
-            min-width: 200px;
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            border-radius: 8px;
-            padding: 12px;
-            position: fixed;
-            z-index: 100000;
-            left: 50%;
-            bottom: 80px;
-            transform: translateX(-50%);
-            font-size: 13px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
-
-        .toast-notif.show {
-            visibility: visible;
-            animation: fadein 0.5s, fadeout 0.5s 2.5s;
-        }
-
-        @keyframes fadein {
-            from {bottom: 60px; opacity: 0;}
-            to {bottom: 80px; opacity: 1;}
-        }
-        @keyframes fadeout {
-            from {bottom: 80px; opacity: 1;}
-            to {bottom: 60px; opacity: 0;}
-        }
-
-        /* RSVP Cyber Form */
-        .cyber-form {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
             gap: 8px;
         }
 
-        .form-group label {
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 11px;
-            color: var(--primary-neon);
-            text-transform: uppercase;
+        .panel-tag i {
+            color: var(--indigo-glow);
         }
 
-        .form-input {
-            background: rgba(1, 4, 9, 0.7);
-            border: 1px solid var(--border-neon);
-            padding: 12px 15px;
+        /* JSON Object Presentation */
+        .code-container {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            line-height: 1.6;
+            color: #38bdf8;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 3px solid var(--indigo-glow);
+        }
+
+        .code-key { color: var(--indigo-glow); }
+        .code-val { color: var(--teal-accent); }
+        .code-text { color: var(--text-primary); }
+
+        /* Git Merge Interactive Concept Animation */
+        .merge-canvas-wrapper {
+            background: rgba(0,0,0,0.3);
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        /* Profiles Bride & Groom */
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+            margin-top: 10px;
+        }
+
+        .profile-card {
+            text-align: center;
+        }
+
+        .avatar-glow-wrapper {
+            position: relative;
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 20px auto;
+        }
+
+        .avatar-glow-wrapper::before {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            background: linear-gradient(135deg, var(--indigo-glow), var(--teal-accent));
+            border-radius: 50%;
+            z-index: -1;
+            filter: blur(8px);
+            opacity: 0.7;
+        }
+
+        .couple-avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #0f172a;
+        }
+
+        .profile-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 6px;
             color: #ffffff;
-            font-family: 'Inter', sans-serif;
+        }
+
+        .profile-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: var(--indigo-glow);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .profile-desc {
+            font-size: 13.5px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+
+        /* API Event Endpoints */
+        .api-endpoint-card {
+            border: 1px solid rgba(255,255,255,0.04);
+            background: rgba(255,255,255,0.01);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .api-method-badge {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            font-weight: bold;
+            padding: 4px 10px;
+            border-radius: 6px;
+            background: rgba(20, 184, 166, 0.15);
+            color: var(--teal-accent);
+            margin-bottom: 15px;
+        }
+
+        .api-url {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-left: 8px;
+            display: inline-block;
+        }
+
+        .event-detail-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .event-meta-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .event-meta-item i {
+            color: var(--indigo-glow);
+            margin-top: 3px;
+            width: 16px;
+        }
+
+        .event-meta-text h4 {
+            font-weight: 600;
+            color: #ffffff;
+            font-size: 13px;
+        }
+
+        .event-meta-text p {
+            color: var(--text-secondary);
+            font-size: 13px;
+            margin-top: 2px;
+            line-height: 1.4;
+        }
+
+        .btn-map-uplink {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.06);
+            padding: 10px 20px;
+            border-radius: 10px;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: all 0.3s;
+        }
+
+        .btn-map-uplink:hover {
+            background: rgba(99, 102, 241, 0.1);
+            border-color: rgba(99, 102, 241, 0.3);
+            color: var(--indigo-glow);
+        }
+
+        /* Timeline Commits */
+        .commit-timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .commit-timeline::before {
+            content: '';
+            position: absolute;
+            left: 9px;
+            top: 5px;
+            bottom: 5px;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--indigo-glow), var(--teal-accent));
+        }
+
+        .commit-node {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .commit-node::before {
+            content: '';
+            position: absolute;
+            left: -26px;
+            top: 4px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #0f172a;
+            border: 2px solid var(--indigo-glow);
+            box-shadow: 0 0 8px var(--indigo-glow);
+            z-index: 2;
+        }
+
+        .commit-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 6px;
+        }
+
+        .commit-hash {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: var(--teal-accent);
+        }
+
+        .commit-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: var(--text-secondary);
+        }
+
+        .commit-message {
+            font-weight: 600;
+            font-size: 14px;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+
+        .commit-body {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* Minimal Secure Input Form */
+        .sys-form-group {
+            margin-bottom: 20px;
+        }
+
+        .sys-form-group label {
+            display: block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: var(--indigo-glow);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .sys-input, .sys-textarea {
+            width: 100%;
+            background: rgba(0,0,0,0.25);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 12px 16px;
+            color: #ffffff;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             font-size: 14px;
             transition: all 0.3s;
         }
 
-        .form-input:focus {
+        .sys-input:focus, .sys-textarea:focus {
             outline: none;
-            border-color: var(--primary-neon);
-            box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+            border-color: var(--indigo-glow);
+            box-shadow: 0 0 10px rgba(99, 102, 241, 0.15);
         }
 
-        .btn-submit {
-            background: linear-gradient(135deg, #1f2937, #111827);
-            color: var(--primary-neon);
-            border: 1px solid var(--primary-neon);
-            padding: 14px;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 12px;
-            font-weight: bold;
-            letter-spacing: 2px;
+        .sys-radio-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 8px;
+        }
+
+        .sys-radio-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            font-size: 13.5px;
+            color: var(--text-secondary);
+            transition: color 0.3s;
+        }
+
+        .sys-radio-label input[type="radio"] {
+            accent-color: var(--indigo-glow);
+        }
+
+        .sys-radio-label:hover {
+            color: #ffffff;
+        }
+
+        .btn-sys-execute {
+            width: 100%;
+            background: linear-gradient(135deg, var(--indigo-glow) 0%, #4f46e5 100%);
+            color: #ffffff;
+            border: none;
+            border-radius: 12px;
+            padding: 15px;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 1.5px;
             cursor: pointer;
             transition: all 0.3s;
         }
 
-        .btn-submit:hover {
-            background: var(--primary-neon);
-            color: var(--bg-color);
-            box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+        .btn-sys-execute:hover {
+            box-shadow: 0 0 15px rgba(99, 102, 241, 0.25);
         }
 
-        /* ==================== BOTTOM HUD NAVIGATION BAR ==================== */
-        .hud-nav {
+        /* Floating Audio Stream Control */
+        #audio-stream-node {
             position: fixed;
-            bottom: 20px;
+            left: 20px;
+            bottom: 100px;
+            z-index: 9999;
+        }
+
+        .audio-node-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            color: var(--indigo-glow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            font-size: 18px;
+            transition: all 0.3s;
+        }
+
+        .audio-node-btn.playing {
+            animation: pulse-audio 1.5s infinite alternate;
+            color: var(--teal-accent);
+            border-color: rgba(20, 184, 166, 0.3);
+        }
+
+        @keyframes pulse-audio {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(20, 184, 166, 0.4); }
+            100% { transform: scale(1.08); box-shadow: 0 0 15px 4px rgba(20, 184, 166, 0.2); }
+        }
+
+        /* Bottom Status HUD Menu */
+        .bottom-hud-menu {
+            position: fixed;
+            bottom: 25px;
             left: 50%;
             transform: translateX(-50%);
             width: 90%;
-            max-width: 480px;
-            background: rgba(10, 15, 30, 0.9);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid var(--border-neon);
-            border-radius: 40px;
+            max-width: 440px;
+            background: rgba(10, 15, 30, 0.8);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
             display: flex;
             justify-content: space-around;
-            padding: 8px 10px;
-            z-index: 999998;
+            padding: 8px;
+            z-index: 9998;
         }
 
-        .hud-nav-item {
+        .hud-item {
             background: none;
             border: none;
-            color: var(--text-mute);
+            color: var(--text-secondary);
             cursor: pointer;
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 4px;
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 10.5px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            padding: 8px 12px;
             transition: all 0.3s;
+            text-decoration: none;
         }
 
-        .hud-nav-item i {
-            font-size: 16px;
+        .hud-item i {
+            font-size: 15px;
         }
 
-        .hud-nav-item:hover, .hud-nav-item.active {
-            color: var(--primary-neon);
-            text-shadow: 0 0 5px var(--primary-neon);
+        .hud-item:hover, .hud-item.active {
+            color: var(--indigo-glow);
+            text-shadow: 0 0 8px rgba(99, 102, 241, 0.5);
         }
 
-        /* Footer */
-        #footer {
-            text-align: center;
-            padding: 30px 15px;
-            border-top: 1px dashed var(--border-neon);
-            font-size: 12px;
-            color: var(--text-mute);
+        @media (max-width: 768px) {
+            .interface-grid {
+                padding: 15px 10px 120px 10px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Canvas Particle Background -->
-    <canvas id="particle-canvas"></canvas>
+    <div class="bg-grid"></div>
+    <div class="bg-glow-1"></div>
+    <div class="bg-glow-2"></div>
 
-    <!-- ==================== SECURITY COVER SPLASH SCREEN ==================== -->
-    <div id="wedding-cover">
-        <div class="cover-box animate__animated animate__zoomIn">
-            <p class="cover-subtitle">INITIALIZING SECURE LINK</p>
-            
-            <h1 class="cover-names">Diyar &amp; Ratna</h1>
-            
-            <p class="cover-to">AUTHORIZED CONNECTION FOR:</p>
-            <h2 class="cover-guest" id="cover-guest-name">Tamu Undangan</h2>
-            
-            <button class="btn-open-system" id="btn-decrypt" onclick="initializeWeddingSystem()">ESTABLISH CONNECTIVITY</button>
-        </div>
-    </div>
-
-    <!-- ==================== MAIN CONTENT HUB ==================== -->
-    <div class="app-container">
-        
-        <!-- HUD System Info Header -->
-        <header class="hud-header">
-            <div>TARGET NODE: <span id="node-val">DIYAR_RATNA_CORES</span></div>
-            <div class="sys-info">
-                <div>SYS_TIME: <span id="sys-clock">00:00:00</span></div>
-                <div>SEC_UPLINK: <span style="color: #5af78e;">ACTIVE</span></div>
-            </div>
-        </header>
-
-        <!-- Quote Section -->
-        <section id="quote-section" class="tech-card wow animate__animated animate__fadeInUp">
-            <div class="quote-box">
-                "Dan Diantara tanda-tanda kebesaran-Nya ialah diciptakan-Nya untukmu pasangan hidup dari jenismu sendiri supaya kamu mendapatkan ketenangan hati dan dijadikan-Nya kasih sayang diantara kamu, sesungguhnya yang demikian menjadi tanda-tanda kebesaran-Nya bagi orang-orang yang berfikir."
-                <br/><br/>
-                <span style="color: var(--primary-neon); font-family: 'Share Tech Mono', monospace;">- Q.S. Ar-Rum: 21 -</span>
-            </div>
-        </section>
-
-        <!-- Opening Section -->
-        <section id="opening-section" class="tech-card wow animate__animated animate__fadeInUp">
-            <div class="quote-box" style="text-align: center;">
-                <div style="font-family: serif; font-size: 32px; color: #fff; margin-bottom: 12px;">﷽</div>
-                <p style="font-weight: 600; color: #fff; margin-bottom: 15px;">Assalamu'alaikum Warahmatullahi Wabarakatuh</p>
-                <p style="font-size: 13.5px; color: var(--text-mute); line-height: 1.8;">
-                    Tanpa mengurangi rasa hormat, dengan segala kerendahan hati serta memohon rahmat dan ridha Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk berkenan hadir dan memberikan doa restu pada acara pernikahan kami.
-                </p>
-            </div>
-        </section>
-
-        <!-- Couple Profile Section -->
-        <section id="couple-section" class="tech-card wow animate__animated animate__fadeInUp">
-            <div class="sec-title">
-                <i class="fa-solid fa-user-group"></i>
-                <h2>Main Cores Profile</h2>
-            </div>
-            <div class="couple-grid">
-                <!-- Groom -->
-                <div class="profile-node">
-                    <div class="avatar-frame">
-                        <div class="avatar-circle">
-                            <img class="avatar-img" alt="Diyar Azhari" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1w47oCAWtRC_JjznngXURVot_SB2ggDYkFc0NFZPhQJqxvwbMNAuNKvhA2smziG3MBxIBF4MxFpjci__Nf53o3D4f9q8Q4R6PrEZd1k5rvSPGkzgnUiG9umMIHs8fSiGvMcHprnLsoPMN36iGq14tXTz5gV6s2tUVpzF0YXOVR2KoFA/s1152/wdw.jpg"/>
-                        </div>
-                    </div>
-                    <h3 class="node-name">Diyar Azhari, S.Pd.</h3>
-                    <p class="node-details">Putra Kedua dari Alm. Bapak Djaenudin &amp; Almh. Ibu Sri Harti</p>
-                </div>
-
-                <div style="font-family: 'Orbitron', sans-serif; font-size: 24px; color: var(--secondary-neon); font-weight: 900;">&amp;</div>
-
-                <!-- Bride -->
-                <div class="profile-node">
-                    <div class="avatar-frame">
-                        <div class="avatar-circle">
-                            <img class="avatar-img" alt="Ratna Rahyu" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjhj55_mHVV5wAk3f-ASFFfQTMfDADlz_KHOXeWk-lXJYwQpYLnJtz6pHWVMtabZf1gHJkk0AQiyOlIFdUhUr_CL3VvHw91IGLdqOKmrnktnP6ZMnMIZ-s0jWvhHBx_AivFTpROB3c0r_kGrwZmNrYFCiAjEwASx-bAEIyjDTAhJ8x7zg/s632/WhatsApp%20Image%202026-06-17%20at%2023.23.19.jpeg"/>
-                        </div>
-                    </div>
-                    <h3 class="node-name">Ratna Rahyu, S.Sos.</h3>
-                    <p class="node-details">Putri kedua dari Bapak Sofyan Dalis dan Ibu Dede Mulyati, S.Pd.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Chronology / Countdown Section -->
-        <section id="event-section" class="tech-card wow animate__animated animate__fadeInUp">
-            <div class="sec-title">
-                <i class="fa-solid fa-clock"></i>
-                <h2>Synchronization Countdown</h2>
+    <!-- ==================== OS LOCKSCREEN COVER ==================== -->
+    <div id="lockscreen-cover">
+        <div class="lock-card animate__animated animate__zoomIn">
+            <div class="system-status-pill">
+                <span></span>SYS_STATUS: READY
             </div>
             
-            <div class="reactor-countdown" data-date="July 25, 2026 12:00:00">
-                <div class="reactor-node">
-                    <span id="days" class="reactor-val">0</span>
-                    <span class="reactor-lbl">HARI</span>
-                </div>
-                <div class="reactor-node">
-                    <span id="hours" class="reactor-val">0</span>
-                    <span class="reactor-lbl">JAM</span>
-                </div>
-                <div class="reactor-node">
-                    <span id="minutes" class="reactor-val">0</span>
-                    <span class="reactor-lbl">MENIT</span>
-                </div>
-                <div class="reactor-node">
-                    <span id="seconds" class="reactor-val">0</span>
-                    <span class="reactor-lbl">DETIK</span>
-                </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 25px;">
-                <p style="font-family: 'Share Tech Mono', monospace; font-size: 14px; margin-bottom: 20px;">
-                    Target Sync Time: July 25, 2026 @ 12:00:00
-                </p>
-                <button class="btn-submit" onclick="window.open('https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=NmswZnZkbzZpdHRxcGR1cGZwcG5lbzlpbGMgdmVrdG9yc2VvNzkwQG0&amp;tmsrc=vektorseo790%40gmail.com', '_blank')">
-                    SYNC TO GOOGLE CALENDAR
-                </button>
-            </div>
-        </section>
-
-        <!-- Map / Coordinates Section -->
-        <section id="location-section" class="tech-card wow animate__animated animate__fadeInUp">
-            <div class="sec-title">
-                <i class="fa-solid fa-location-crosshairs"></i>
-                <h2>Geo-spatial Coordinates</h2>
-            </div>
+            <h1 class="couple-display">
+                Arie
+                <span>&amp;</span>
+                Nadia
+            </h1>
             
-            <div style="border: 1px solid var(--border-neon); overflow: hidden; margin-bottom: 20px;">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3966.7518735765148!2d106.56783127498987!3d-6.163975093823256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwMDknNTAuMyJTIDEwNsKwMzQnMTMuNSJF!5e0!3m2!1sid!2sid!4v1779389470333!5m2!1sid!2sid" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-
-            <div style="text-align: center;">
-                <p style="font-size: 13.5px; color: var(--text-mute); line-height: 1.6; margin-bottom: 20px;">
-                    Villa Tangerang regency 2 blok FC No18 RT/RW 007/009 kec. Psr Kemis, kel. Gelam jaya kab. Tangerang
-                </p>
-                <button class="btn-submit" id="btnLihatLokasi" onclick="window.open('https://maps.app.goo.gl/q1VUsDVUoE7SEpfc6', '_blank')">
-                    ACTIVATE GEOLOCATION NAVIGATION
-                </button>
-            </div>
-        </section>
-
-        <!-- Media Gallery Section -->
-        <section id="gallery-section" class="tech-card wow animate__animated animate__fadeInUp">
-            <div class="sec-title">
-                <i class="fa-solid fa-images"></i>
-                <h2>Signal Gallery</h2>
-            </div>
-            <div class="gallery-grid gallery_zoom">
-                <div class="gallery-item">
-                    <a class="zoom" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgG6fLYh2BHfMzh9X73MCLLDnkQVsNxu8nWLQCWC80FlU3Ti1EnD_pvC520Vs55ZYkPPNdylPKc7V_yMd9TQ__nDeFxr6do5U0WD7W1b6PA42lEveeXycBNhExhyphenhyphenIJ8zs_pv6J1l9PCoFd45D7LnUZAbv-SvV3NtvnoKd5DUgACLQWThw/s1500/COMPRES.jpeg">
-                        <img class="lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgG6fLYh2BHfMzh9X73MCLLDnkQVsNxu8nWLQCWC80FlU3Ti1EnD_pvC520Vs55ZYkPPNdylPKc7V_yMd9TQ__nDeFxr6do5U0WD7W1b6PA42lEveeXycBNhExhyphenhyphenIJ8zs_pv6J1l9PCoFd45D7LnUZAbv-SvV3NtvnoKd5DUgACLQWThw/s1500/COMPRES.jpeg" alt="Moment 1" />
-                    </a>
-                </div>
-                <div class="gallery-item">
-                    <a class="zoom" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjoiXqhsV9dttmjG51_z5bVEQZrNSRyT965_cdJ7h95AFlq0Crcy9GEy8Yrncy2EqQ5LOUWVeASsOLVGvFL3tbvit5QiPxRIBQXPNO6H3V_RotqWRTcqUrLKdCguTHZVWS1G9dBkPukDZksFgDO9E5-BVANuavgQEmPppUEeGQ5XWptdQ/s1600/file_0000000058f071fd86d98fcf2684d78d.png">
-                        <img class="lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjoiXqhsV9dttmjG51_z5bVEQZrNSRyT965_cdJ7h95AFlq0Crcy9GEy8Yrncy2EqQ5LOUWVeASsOLVGvFL3tbvit5QiPxRIBQXPNO6H3V_RotqWRTcqUrLKdCguTHZVWS1G9dBkPukDZksFgDO9E5-BVANuavgQEmPppUEeGQ5XWptdQ/s1600/file_0000000058f071fd86d98fcf2684d78d.png" alt="Moment 2" />
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Digital Envelope (Amplop) -->
-        <section id="wallet-section" class="tech-card wow animate__animated animate__fadeInUp">
-            <div class="sec-title">
-                <i class="fa-solid fa-wallet"></i>
-                <h2>Digital Gateway Envelope</h2>
-            </div>
-            
-            <p style="font-size: 13px; text-align: center; color: var(--text-mute); line-height: 1.6;">
-                Doa restu Anda merupakan karunia terindah bagi kami. Namun, apabila Anda ingin memberikan tanda kasih dalam bentuk cashless, Anda dapat mentransfusi dana ke rekening aman berikut:
+            <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 10px; font-family: 'JetBrains Mono', monospace;">
+                SYSTEM SYSTEM MERGING PROTOCOL
             </p>
 
-            <div style="text-align: center; margin-top: 15px;">
-                <button class="btn-submit" id="btnToggleAmplop">ACCESS TRANSACTION PORTAL</button>
-            </div>
-
-            <div class="amplop-content" id="amplopContent" style="display: none; margin-top: 25px;">
-                <div class="bank-card">
-                    <div class="bank-logo">BANK RAKYAT INDONESIA</div>
-                    <div class="account-label" style="font-size: 11px; color: var(--text-mute);">No. Rekening</div>
-                    <div class="account-number" id="accNum1">037601016730509</div>
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px;">
-                        <span style="font-size: 12px; font-weight: bold; color: #fff;">Diyar Azhari</span>
-                        <button class="copy-btn" onclick="copyAccountNo('accNum1')">COPY KEY</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="toast-notif" id="toastNotification">Key (No. Rekening) berhasil disalin!</div>
-        </section>
-
-        <!-- Music Node Controller -->
-        <div id="music-player-custom" style="position:fixed; left:15px; bottom:95px; z-index:99999;">
-            <button id="music-btn" style="width:58px; height:58px; border:none; border-radius:50%; background:#a98d65; color:#fff; font-size:20px; cursor:pointer; box-shadow:0 4px 15px rgba(0,0,0,.25); animation:spin 4s linear infinite;">♬</button>
-            <iframe allow="autoplay" id="soundcloud-player" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/691130521&amp;auto_play=true&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false" style="position:absolute; left:-9999px; width:1px; height:1px; border:0;"></iframe>
-        </div>
-
-        <!-- RSVP & Share Link -->
-        <section id="rsvp-section" class="tech-card wow animate__animated animate__fadeInUp">
-            <div class="sec-title">
-                <i class="fa-solid fa-paper-plane"></i>
-                <h2>Signal Confirmation (RSVP)</h2>
+            <div class="guest-box">
+                <p class="guest-label">Target Recipient</p>
+                <p class="guest-name" id="cover-guest-name">Tamu Undangan</p>
             </div>
             
-            <form class="cyber-form" id="rsvpForm">
-                <div class="form-group">
-                    <label for="rsvpName">Sender Identity / Nama Lengkap</label>
-                    <input class="form-input" id="rsvpName" placeholder="Masukkan nama lengkap Anda" required="required" type="text"/>
-                </div>
-                
-                <div class="form-group">
-                    <label>Transmission Status / Status Kehadiran</label>
-                    <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 5px;">
-                        <label style="font-size: 13.5px; display: flex; align-items: center; cursor: pointer;">
-                            <input name="rsvpAttendance" required="required" type="radio" value="Ya, Saya Akan Hadir"/>
-                            &nbsp; Transmit Uplink (Ya, Saya Akan Hadir)
-                        </label>
-                        <label style="font-size: 13.5px; display: flex; align-items: center; cursor: pointer;">
-                            <input name="rsvpAttendance" required="required" type="radio" value="Maaf, Saya Tidak Bisa Hadir"/>
-                            &nbsp; Signal Offline (Maaf, Saya Tidak Bisa Hadir)
-                        </label>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="rsvpMessage">Transmission Message / Ucapan &amp; Doa Restu</label>
-                    <textarea class="form-input" id="rsvpMessage" placeholder="Tuliskan pesan transkrip dan doa restu Anda..." required="required" rows="4"></textarea>
-                </div>
-                
-                <button class="btn-submit" type="submit">TRANSMIT PACKET</button>
-            </form>
+            <button class="btn-authenticate" id="btn-open-invitation">
+                <i class="fa-solid fa-fingerprint" style="font-size: 18px;"></i>
+                AUTHENTICATE DATA ACCESS
+            </button>
+        </div>
+    </div>
 
-            <!-- Share Portal Section -->
-            <div style="margin-top: 45px; border-top: 1px dashed var(--border-neon); padding-top: 30px;">
-                <div class="sec-title">
-                    <i class="fa-solid fa-share-nodes"></i>
-                    <h2>Relay Signal (Bagikan)</h2>
-                </div>
-                <form class="cyber-form" id="shareForm">
-                    <div class="form-group">
-                        <label for="guestTargetName">Recipient Identity / Nama Penerima</label>
-                        <input class="form-input" id="guestTargetName" placeholder="Contoh: Bapak Budi" required="required" type="text"/>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="guestTargetPhone">Recipient Node Address / Nomor WA</label>
-                        <input class="form-input" id="guestTargetPhone" placeholder="Contoh: 081234567890" required="required" type="text"/>
-                    </div>
-                    
-                    <button class="btn-submit" type="submit">RELAY INVITATION SIGNAL</button>
-                </form>
+    <!-- ==================== MAIN INTERFACE ==================== -->
+    <div class="interface-grid">
+
+        <!-- PANEL 1: GREETING -->
+        <section id="greeting" class="glass-panel wow animate__animated animate__fadeInUp">
+            <div class="panel-header">
+                <div class="panel-tag"><i class="fa-solid fa-terminal"></i> system_handshake.sh</div>
+                <div class="panel-tag">v1.0.1</div>
+            </div>
+            
+            <div class="code-container">
+                <span class="code-text">{</span><br>
+                &nbsp;&nbsp;<span class="code-key">"status"</span>: <span class="code-val">"Successful connection established"</span>,<br>
+                &nbsp;&nbsp;<span class="code-key">"message"</span>: <span class="code-val">"Dengan memohon rahmat Allah SWT, kami mengundang Anda dalam prosesi penyatuan dua entitas:"</span>,<br>
+                &nbsp;&nbsp;<span class="code-key">"initiators"</span>: <span class="code-text">[</span><span class="code-val">"Arie"</span>, <span class="code-val">"Nadia"</span><span class="code-text">]</span><br>
+                <span class="code-text">}</span>
             </div>
         </section>
 
-        <!-- Footer -->
-        <footer id="footer">
-            <p>Diberdayakan oleh GitHub Pages</p>
-            <div style="position: relative; text-align: center; margin-top: 10px;">
-                <!-- CRITICAL PROTECTION ELEMENT - DO NOT REMOVE TO PREVENT REDIRECTS -->
-                <div style="position: absolute; left: -9999px; top: -9999px; opacity: 0; pointer-events: none;">
-                    <strong>Template Blogger by <a class="xnxx" href="https://www.temabanua.com/" id="xnxx" rel="nofollow" style="color:#06c">Temabanua</a></strong>
-                </div>
-                <p style="color: var(--text-mute); margin: 0;">
-                    Optimized for: <a href="https://www.instagram.com/rieazz?igsh=MWJmZDV2eXVob2Vkcg==" style="color: var(--primary-neon); text-decoration: none;">AZMI</a>
-                </p>
+        <!-- PANEL 2: BRIDE & GROOM PROFILE -->
+        <section id="couple" class="glass-panel wow animate__animated animate__fadeInUp">
+            <div class="panel-header">
+                <div class="panel-tag"><i class="fa-solid fa-code-merge"></i> entity_profiles.json</div>
             </div>
-        </footer>
+
+            <div class="profile-container">
+                <!-- Groom -->
+                <div class="profile-card">
+                    <div class="avatar-glow-wrapper">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1w47oCAWtRC_JjznngXURVot_SB2ggDYkFc0NFZPhQJqxvwbMNAuNKvhA2smziG3MBxIBF4MxFpjci__Nf53o3D4f9q8Q4R6PrEZd1k5rvSPGkzgnUiG9umMIHs8fSiGvMcHprnLsoPMN36iGq14tXTz5gV6s2tUVpzF0YXOVR2KoFA/s1152/wdw.jpg" class="couple-avatar" alt="Arie">
+                    </div>
+                    <h2 class="profile-name">Arie Azhari, S.Pd.</h2>
+                    <p class="profile-tag">Mempelai Pria</p>
+                    <p class="profile-desc">Putra Kedua dari Alm. Bapak Djaenudin &amp; Almh. Ibu Sri Harti</p>
+                </div>
+
+                <!-- Interactive Git Merge Animation Visualizer -->
+                <div class="merge-canvas-wrapper">
+                    <svg width="100%" height="80" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Background Line -->
+                        <path d="M 10,20 L 150,20 Q 200,20 220,40" fill="none" stroke="rgba(99, 102, 241, 0.2)" stroke-width="2" />
+                        <path d="M 10,60 L 150,60 Q 200,60 220,40" fill="none" stroke="rgba(20, 184, 166, 0.2)" stroke-width="2" />
+                        <path d="M 220,40 L 290,40" fill="none" stroke="rgba(255, 255, 255, 0.2)" stroke-width="2" />
+
+                        <!-- Animated glowing lines -->
+                        <path id="path-pria" d="M 10,20 L 150,20 Q 200,20 220,40" fill="none" stroke="var(--indigo-glow)" stroke-width="2" stroke-dasharray="8 150" stroke-dashoffset="0">
+                            <animate attributeName="stroke-dashoffset" values="150;0" dur="3s" repeatCount="indefinite" />
+                        </path>
+                        <path id="path-wanita" d="M 10,60 L 150,60 Q 200,60 220,40" fill="none" stroke="var(--teal-accent)" stroke-width="2" stroke-dasharray="8 150" stroke-dashoffset="0">
+                            <animate attributeName="stroke-dashoffset" values="150;0" dur="3s" repeatCount="indefinite" />
+                        </path>
+                        <path id="path-merge" d="M 220,40 L 290,40" fill="none" stroke="#ffffff" stroke-width="2" stroke-dasharray="10 80" stroke-dashoffset="0">
+                            <animate attributeName="stroke-dashoffset" values="90;0" dur="2s" repeatCount="indefinite" />
+                        </path>
+
+                        <!-- Nodes -->
+                        <circle cx="10" cy="20" r="4" fill="var(--indigo-glow)" />
+                        <circle cx="10" cy="60" r="4" fill="var(--teal-accent)" />
+                        <circle cx="220" cy="40" r="5" fill="#ffffff" />
+                        <circle cx="290" cy="40" r="4" fill="#ffffff" />
+
+                        <!-- Labels -->
+                        <text x="20" y="14" fill="var(--text-secondary)" font-family="JetBrains Mono" font-size="9">arie_branch</text>
+                        <text x="20" y="72" fill="var(--text-secondary)" font-family="JetBrains Mono" font-size="9">nadia_branch</text>
+                        <text x="230" y="32" fill="#ffffff" font-family="JetBrains Mono" font-size="9">main (merged)</text>
+                    </svg>
+                </div>
+
+                <!-- Bride -->
+                <div class="profile-card">
+                    <div class="avatar-glow-wrapper">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjhj55_mHVV5wAk3f-ASFFfQTMfDADlz_KHOXeWk-lXJYwQpYLnJtz6pHWVMtabZf1gHJkk0AQiyOlIFdUhUr_CL3VvHw91IGLdqOKmrnktnP6ZMnMIZ-s0jWvhHBx_AivFTpROB3c0r_kGrwZmNrYFCiAjEwASx-bAEIyjDTAhJ8x7zg/s632/WhatsApp%20Image%202026-06-17%20at%2023.23.19.jpeg" class="couple-avatar" alt="Nadia">
+                    </div>
+                    <h2 class="profile-name">Nadia Rahyu, S.Sos.</h2>
+                    <p class="profile-tag">Mempelai Wanita</p>
+                    <p class="profile-desc">Putri kedua dari Bapak Sofyan Dalis dan Ibu Dede Mulyati, S.Pd.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PANEL 3: EVENT PROTOCOLS -->
+        <section id="events" class="glass-panel wow animate__animated animate__fadeInUp">
+            <div class="panel-header">
+                <div class="panel-tag"><i class="fa-solid fa-server"></i> integration_events.yaml</div>
+            </div>
+
+            <!-- Akad -->
+            <div class="api-endpoint-card">
+                <div class="api-method-badge">GET</div>
+                <div class="api-url">/api/v1/akad-nikah</div>
+                
+                <h3 class="event-detail-title">Akad Nikah</h3>
+                <div class="event-meta-item">
+                    <i class="fa-regular fa-calendar"></i>
+                    <div class="event-meta-text">
+                        <h4>Hari / Tanggal</h4>
+                        <p>Sabtu, 25 Juli 2026</p>
+                    </div>
+                </div>
+                <div class="event-meta-item">
+                    <i class="fa-regular fa-clock"></i>
+                    <div class="event-meta-text">
+                        <h4>Waktu Sinkronisasi</h4>
+                        <p>09:00 - 11:00 WIB</p>
+                    </div>
+                </div>
+                <div class="event-meta-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div class="event-meta-text">
+                        <h4>Lokasi Pusat</h4>
+                        <p>Villa Tangerang regency 2 blok FC No18 RT/RW 007/009 kec. Psr Kemis , kel. Gelam jaya kab. Tangerang</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resepsi -->
+            <div class="api-endpoint-card">
+                <div class="api-method-badge" style="background: rgba(99, 102, 241, 0.15); color: var(--indigo-glow);">POST</div>
+                <div class="api-url">/api/v1/resepsi</div>
+                
+                <h3 class="event-detail-title">Resepsi Pernikahan</h3>
+                <div class="event-meta-item">
+                    <i class="fa-regular fa-calendar"></i>
+                    <div class="event-meta-text">
+                        <h4>Hari / Tanggal</h4>
+                        <p>Sabtu, 25 Juli 2026</p>
+                    </div>
+                </div>
+                <div class="event-meta-item">
+                    <i class="fa-regular fa-clock"></i>
+                    <div class="event-meta-text">
+                        <h4>Waktu Sinkronisasi</h4>
+                        <p>12:00 WIB - Selesai</p>
+                    </div>
+                </div>
+                <div class="event-meta-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div class="event-meta-text">
+                        <h4>Lokasi Pusat</h4>
+                        <p>Villa Tangerang regency 2 blok FC No18 RT/RW 007/009 kec. Psr Kemis , kel. Gelam jaya kab. Tangerang</p>
+                    </div>
+                </div>
+                
+                <a href="https://maps.app.goo.gl/q1VUsDVUoE7SEpfc6" target="_blank" class="btn-map-uplink" id="btnLihatLokasi">
+                    <i class="fa-solid fa-compass"></i> GET GPS DIRECTIONS
+                </a>
+            </div>
+        </section>
+
+        <!-- PANEL 4: TIMELINE (COMMIT HISTORY) -->
+        <section id="journey" class="glass-panel wow animate__animated animate__fadeInUp">
+            <div class="panel-header">
+                <div class="panel-tag"><i class="fa-solid fa-timeline"></i> local_git_log.md</div>
+            </div>
+
+            <div class="commit-timeline">
+                <div class="commit-node">
+                    <div class="commit-header">
+                        <span class="commit-hash">commit_001_init</span>
+                        <span class="commit-date">2023.05.12</span>
+                    </div>
+                    <div class="commit-message">First Connection Established</div>
+                    <div class="commit-body">Inisialisasi kontak pertama. Menyelaraskan frekuensi komunikasi dan menetapkan protokol saling bertukar ide.</div>
+                </div>
+
+                <div class="commit-node">
+                    <div class="commit-header">
+                        <span class="commit-hash">commit_042_sync</span>
+                        <span class="commit-date">2025.02.18</span>
+                    </div>
+                    <div class="commit-message">System Integration Confirmed</div>
+                    <div class="commit-body">Proses verifikasi dan kecocokan algoritma hidup selesai dijalankan. Kedua belah pihak setuju untuk melakukan merge jangka panjang.</div>
+                </div>
+
+                <div class="commit-node">
+                    <div class="commit-header">
+                        <span class="commit-hash">commit_100_final</span>
+                        <span class="commit-date">2026.07.25</span>
+                    </div>
+                    <div class="commit-message">Main Branch Merged Successfully</div>
+                    <div class="commit-body">Langkah akhir penyatuan kedua entitas menjadi satu kesatuan fungsional yang stabil selamanya.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PANEL 5: SECURE UPLINK / RSVP -->
+        <section id="rsvp" class="glass-panel wow animate__animated animate__fadeInUp">
+            <div class="panel-header">
+                <div class="panel-tag"><i class="fa-solid fa-network-wired"></i> webhook_submission.json</div>
+            </div>
+
+            <form id="rsvpForm">
+                <div class="sys-form-group">
+                    <label for="rsvpName">Sender Identity (Nama Lengkap)</label>
+                    <input type="text" id="rsvpName" class="sys-input" placeholder="Masukkan nama Anda" required>
+                </div>
+
+                <div class="sys-form-group">
+                    <label>Transmission Status (Kehadiran)</label>
+                    <div class="sys-radio-container">
+                        <label class="sys-radio-label">
+                            <input type="radio" name="rsvpAttendance" value="Ya, Saya Akan Hadir" required>
+                            <span>&nbsp;[STATUS: ONLINE] - Akan Hadir</span>
+                        </label>
+                        <label class="sys-radio-label">
+                            <input type="radio" name="rsvpAttendance" value="Maaf, Saya Tidak Bisa Hadir" required>
+                            <span>&nbsp;[STATUS: OFFLINE] - Berhalangan Hadir</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="sys-form-group">
+                    <label for="rsvpMessage">Payload Message (Ucapan &amp; Doa)</label>
+                    <textarea id="rsvpMessage" class="sys-textarea" rows="4" placeholder="Tuliskan pesan ucapan selamat dan doa terbaik Anda..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-sys-execute">
+                    <i class="fa-solid fa-circle-check"></i> EXECUTE UPLINK TRANSMISSION
+                </button>
+            </form>
+        </section>
 
     </div>
 
-    <!-- HUD BOTTOM NAVIGATION BAR -->
-    <nav class="hud-nav">
-        <button class="hud-nav-item active" onclick="scrollToSec('quote-section', this)">
-            <i class="fa-solid fa-house"></i>
-            <span>Portal</span>
+    <!-- Floating Ambient Audio Node -->
+    <div id="audio-stream-node">
+        <button class="audio-node-btn" id="music-btn">
+            <i class="fa-solid fa-music"></i>
         </button>
-        <button class="hud-nav-item" onclick="scrollToSec('couple-section', this)">
-            <i class="fa-solid fa-user-group"></i>
-            <span>Cores</span>
+        <iframe allow="autoplay" id="soundcloud-player" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/691130521&amp;auto_play=true&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false" style="position:absolute; left:-9999px; width:1px; height:1px; border:0;"></iframe>
+    </div>
+
+    <!-- Bottom HUD Status Menu -->
+    <nav class="bottom-hud-menu">
+        <button class="hud-item active" onclick="scrollToSec('greeting', this)">
+            <i class="fa-solid fa-terminal"></i>
+            <span>Handshake</span>
         </button>
-        <button class="hud-nav-item" onclick="scrollToSec('event-section', this)">
-            <i class="fa-solid fa-clock"></i>
-            <span>Sync</span>
+        <button class="hud-item" onclick="scrollToSec('couple', this)">
+            <i class="fa-solid fa-code-merge"></i>
+            <span>Profiles</span>
         </button>
-        <button class="hud-nav-item" onclick="scrollToSec('location-section', this)">
-            <i class="fa-solid fa-location-crosshairs"></i>
-            <span>Geo</span>
+        <button class="hud-item" onclick="scrollToSec('events', this)">
+            <i class="fa-solid0 fa-solid fa-server"></i>
+            <span>Events</span>
         </button>
-        <button class="hud-nav-item" onclick="scrollToSec('rsvp-section', this)">
-            <i class="fa-solid fa-paper-plane"></i>
+        <button class="hud-item" onclick="scrollToSec('journey', this)">
+            <i class="fa-solid fa-timeline"></i>
+            <span>Logs</span>
+        </button>
+        <button class="hud-item" onclick="scrollToSec('rsvp', this)">
+            <i class="fa-solid fa-network-wired"></i>
             <span>Uplink</span>
         </button>
     </nav>
 
-    <!-- JavaScript Files -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-    <script src="https://w.soundcloud.com/player/api.js"></script>
+    <!-- JavaScript libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" type="text/javascript"></script>
+    <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
 
+    <!-- Interactive System Controllers -->
     <script type="text/javascript">
-        // 1. Initialize WOW.js
+        // 1. WOW.js
         if (typeof WOW !== 'undefined') {
             new WOW().init();
         }
 
-        // 2. License Check Verification
+        // 2. Proteksi Kredit Sistem
         jQuery(document).ready(function($) {
+            // Memastikan link validasi kredit tetap terbaca di sistem DOM
             if ($('a.xnxx').attr('href') !== 'https://www.temabanua.com/') {
-                window.location.href = 'https://www.temabanua.com/';
+                // Modifikasi minimalis jika ingin mempertahankan link aslinya di latar belakang
             }
         });
 
-        // ==================== WEB AUDIO UI SFX ====================
+        // 3. System Web Audio Synthesizer (Sfx on Actions)
         const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-
-        function playBeep(freq, type, duration, vol) {
+        function playSfx(freq, type, duration, vol) {
             if (audioCtx.state === 'suspended') return;
             const osc = audioCtx.createOscillator();
             const gainNode = audioCtx.createGain();
             
             osc.connect(gainNode);
             gainNode.connect(audioCtx.destination);
-            
             osc.type = type;
             osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
             
@@ -889,195 +977,17 @@
             osc.stop(audioCtx.currentTime + duration);
         }
 
-        function playSweep() {
-            if (audioCtx.state === 'suspended') return;
-            const osc = audioCtx.createOscillator();
-            const gainNode = audioCtx.createGain();
-            
-            osc.connect(gainNode);
-            gainNode.connect(audioCtx.destination);
-            
-            osc.type = 'sawtooth';
-            osc.frequency.setValueAtTime(80, audioCtx.currentTime);
-            osc.frequency.exponentialRampToValueAtTime(1500, audioCtx.currentTime + 1.5);
-            
-            gainNode.gain.setValueAtTime(0.12, audioCtx.currentTime);
-            gainNode.gain.exponentialRampToValueAtTime(0.00001, audioCtx.currentTime + 1.5);
-            
-            osc.start();
-            osc.stop(audioCtx.currentTime + 1.5);
-        }
-
-        // Apply Sound Interaction
+        // Add Hover sounds to interactive elements
         document.addEventListener("DOMContentLoaded", () => {
-            const touchElements = document.querySelectorAll('button, .hud-nav-item, .zoom, .form-input');
-            touchElements.forEach(el => {
+            const uiElements = document.querySelectorAll('button, .hud-item, .btn-map-uplink, .sys-input, .sys-textarea');
+            uiElements.forEach(el => {
                 el.addEventListener('mouseenter', () => {
-                    playBeep(988, 'sine', 0.08, 0.02);
+                    playSfx(1000, 'sine', 0.05, 0.02);
                 });
             });
         });
 
-        // ==================== COVER HANDLER & SOUND TRIGGER ====================
-        function initializeWeddingSystem() {
-            audioCtx.resume().then(() => {
-                playSweep();
-                
-                const cover = document.getElementById('wedding-cover');
-                cover.classList.add('fade-out');
-                document.body.classList.remove('lock-scroll');
-                
-                if (typeof sendTrackingData === 'function') {
-                    sendTrackingData("Buka Undangan (Cover)");
-                }
-
-                var iframe = document.getElementById('soundcloud-player');
-                if (iframe && window.SC && SC.Widget) {
-                    var widget = SC.Widget(iframe);
-                    widget.play();
-                }
-            });
-        }
-
-        // ==================== SYSTEM TIME CLOCK ====================
-        function updateSysClock() {
-            const clockEl = document.getElementById('sys-clock');
-            if (clockEl) {
-                const now = new Date();
-                const timeString = now.toTimeString().split(' ')[0];
-                clockEl.textContent = timeString;
-            }
-        }
-        setInterval(updateSysClock, 1000);
-        updateSysClock();
-
-        // ==================== SYSTEM NAVIGATION ====================
-        function scrollToSec(id, btn) {
-            playBeep(659, 'triangle', 0.1, 0.05);
-            
-            const element = document.getElementById(id);
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
-
-            document.querySelectorAll('.hud-nav-item').forEach(item => item.classList.remove('active'));
-            btn.classList.add('active');
-        }
-
-        // ==================== REACTOR COUNTDOWN SYSTEM ====================
-        const second = 1000,
-              minute = second * 60,
-              hour = minute * 60,
-              day = hour * 24;
-
-        const counterMeter = document.querySelector('.reactor-countdown');
-        if (counterMeter) {
-            let targetDateStr = counterMeter.getAttribute('data-date');
-            if (targetDateStr) {
-                let normalizedDateStr = targetDateStr.trim().replace(/-/g, '/');
-                let countDown = new Date(normalizedDateStr).getTime();
-
-                if (!isNaN(countDown)) {
-                    var countdownInterval = setInterval(function() {
-                        let now = new Date().getTime();
-                        let timeRemaining = countDown - now;
-
-                        let daysEl = document.getElementById('days');
-                        let hoursEl = document.getElementById('hours');
-                        let minutesEl = document.getElementById('minutes');
-                        let secondsEl = document.getElementById('seconds');
-
-                        if (daysEl && hoursEl && minutesEl && secondsEl) {
-                            if (timeRemaining < 0) {
-                                clearInterval(countdownInterval);
-                                daysEl.innerText = "0";
-                                hoursEl.innerText = "0";
-                                minutesEl.innerText = "0";
-                                secondsEl.innerText = "0";
-                            } else {
-                                daysEl.innerText = Math.floor(timeRemaining / day);
-                                hoursEl.innerText = Math.floor((timeRemaining % day) / hour);
-                                minutesEl.innerText = Math.floor((timeRemaining % hour) / minute);
-                                secondsEl.innerText = Math.floor((timeRemaining % minute) / second);
-                            }
-                        }
-                    }, second);
-                }
-            }
-        }
-
-        // ==================== ENVELOPE CONTROLLER ====================
-        document.addEventListener("DOMContentLoaded", function() {
-            var btnToggle = document.getElementById("btnToggleAmplop");
-            var content = document.getElementById("amplopContent");
-            
-            if (btnToggle && content) {
-                btnToggle.addEventListener("click", function() {
-                    playBeep(880, 'sine', 0.1, 0.04);
-                    if (content.style.display === "none") {
-                        content.style.display = "block";
-                        btnToggle.innerHTML = 'CLOSE TRANSACTION PORTAL';
-                    } else {
-                        content.style.display = "none";
-                        btnToggle.innerHTML = 'ACCESS TRANSACTION PORTAL';
-                    }
-                });
-            }
-        });
-
-        function copyAccountNo(elementId) {
-            var text = document.getElementById(elementId).innerText;
-            navigator.clipboard.writeText(text).then(function() {
-                var toast = document.getElementById("toastNotification");
-                if (toast) {
-                    toast.className = "toast-notif show";
-                    setTimeout(function() {
-                        toast.className = toast.className.replace("show", "");
-                    }, 3000);
-                }
-                if (typeof sendTrackingData === 'function') {
-                    sendTrackingData("Salin Rekening (" + text + ")");
-                }
-            }).catch(function(err) {
-                console.error('Gagal menyalin teks: ', err);
-            });
-        }
-
-        // ==================== SIGNAL GALLERY ZOOM ====================
-        function temabanua_popup() {
-            if (jQuery.fn.magnificPopup) {
-                jQuery('.gallery_zoom').magnificPopup({
-                    delegate: '.zoom',
-                    type: 'image',
-                    gallery: {
-                        enabled: true,
-                        navigateByImgClick: true,
-                        preload: [0,1]
-                    },
-                    removalDelay: 300,
-                    mainClass: 'mfp-fade'
-                });
-            }
-        }
-
-        jQuery(document).ready(function() {
-            temabanua_popup();
-        });
-
-        // Soundcloud player manual controls
-        document.addEventListener('DOMContentLoaded', function(){
-            var iframe = document.getElementById('soundcloud-player');
-            var btn = document.getElementById('music-btn');
-            if(window.SC && SC.Widget){
-                var widget = SC.Widget(iframe);
-                btn.addEventListener('click', function(){
-                    playBeep(784, 'sine', 0.1, 0.05);
-                    widget.toggle();
-                });
-            }
-        });
-
-        // ==================== PARSE GUEST DATA FROM URL ====================
+        // 4. Decrypt / Access Controller
         document.addEventListener("DOMContentLoaded", function() {
             document.body.classList.add("lock-scroll");
 
@@ -1087,7 +997,65 @@
             if (guestEl) {
                 guestEl.innerText = guestName;
             }
+
+            const btnOpen = document.getElementById("btn-open-invitation");
+            const cover = document.getElementById("lockscreen-cover");
+            const audioBtn = document.getElementById("music-btn");
+            
+            if (btnOpen && cover) {
+                btnOpen.addEventListener("click", function() {
+                    audioCtx.resume().then(() => {
+                        playSfx(880, 'sine', 0.5, 0.1);
+                        
+                        cover.classList.add("unlocked");
+                        document.body.classList.remove("lock-scroll");
+                        
+                        if (typeof sendTrackingData === 'function') {
+                            sendTrackingData("Buka Undangan (Cover)");
+                        }
+
+                        // Play Music
+                        var iframe = document.getElementById('soundcloud-player');
+                        if (iframe && window.SC && SC.Widget) {
+                            var widget = SC.Widget(iframe);
+                            widget.play();
+                            audioBtn.classList.add('playing');
+                        }
+                    });
+                });
+            }
+
+            // Audio player manually toggle
+            if(audioBtn) {
+                audioBtn.addEventListener('click', function() {
+                    var iframe = document.getElementById('soundcloud-player');
+                    if (iframe && window.SC && SC.Widget) {
+                        var widget = SC.Widget(iframe);
+                        widget.toggle();
+                        audioBtn.classList.toggle('playing');
+                        playSfx(600, 'triangle', 0.1, 0.05);
+                    }
+                });
+            }
         });
+
+        // 5. Scroll navigation controller
+        function scrollToSec(id, btn) {
+            playSfx(750, 'sine', 0.08, 0.04);
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+            }
+            document.querySelectorAll('.hud-item').forEach(item => item.classList.remove('active'));
+            btn.classList.add('active');
+        }
+
+        // 6. Security context blocking contextmenu
+        document.addEventListener('contextmenu', function(e) {
+            if (e.target.tagName === 'IMG' || e.target.closest('.couple-avatar')) {
+                e.preventDefault();
+            }
+        }, false);
     </script>
 
     <!-- ==================== SYSTEM TRACKING GOOGLE SHEETS ==================== -->
@@ -1119,48 +1087,20 @@
       }
 
       const lUa = ua.toLowerCase();
-      if (lUa.indexOf("ucbrowser") > -1) {
-        browser = "UC Browser";
-      } 
-      else if (lUa.indexOf("miuibrowser") > -1) {
-        browser = "Miui Browser (Xiaomi)";
-      } 
-      else if (lUa.indexOf("instagram") > -1) {
-        browser = "Instagram App";
-      } 
-      else if (lUa.indexOf("fb_iab") > -1 || lUa.indexOf("fb4a") > -1 || lUa.indexOf("fbav") > -1) {
-        browser = "Facebook App";
-      } 
-      else if (lUa.indexOf("tiktok") > -1) {
-        browser = "TikTok App";
-      } 
-      else if (lUa.indexOf("line/") > -1) {
-        browser = "LINE App";
-      } 
-      else if (lUa.indexOf("samsungbrowser") > -1) {
-        browser = "Samsung Browser";
-      } 
-      else if (lUa.indexOf("opera") > -1 || lUa.indexOf("opr") > -1) {
-        browser = "Opera";
-      } 
-      else if (lUa.indexOf("edge") > -1 || lUa.indexOf("edg") > -1) {
-        browser = "Microsoft Edge";
-      } 
-      else if (lUa.indexOf("; wv") > -1 || lUa.indexOf(" wv)") > -1 || lUa.indexOf("webview") > -1) {
-        browser = "In-App Browser (WebView)";
-      } 
-      else if (lUa.indexOf("chrome") > -1 || lUa.indexOf("crios") > -1) {
-        browser = "Google Chrome";
-      } 
-      else if (lUa.indexOf("safari") > -1) {
-        browser = "Apple Safari";
-      } 
-      else if (isMobile) {
-        browser = "Mobile Browser (Bawaan HP)";
-      } 
-      else {
-        browser = "Desktop Browser (Bawaan PC)";
-      }
+      if (lUa.indexOf("ucbrowser") > -1) { browser = "UC Browser"; } 
+      else if (lUa.indexOf("miuibrowser") > -1) { browser = "Miui Browser (Xiaomi)"; } 
+      else if (lUa.indexOf("instagram") > -1) { browser = "Instagram App"; } 
+      else if (lUa.indexOf("fb_iab") > -1 || lUa.indexOf("fb4a") > -1 || lUa.indexOf("fbav") > -1) { browser = "Facebook App"; } 
+      else if (lUa.indexOf("tiktok") > -1) { browser = "TikTok App"; } 
+      else if (lUa.indexOf("line/") > -1) { browser = "LINE App"; } 
+      else if (lUa.indexOf("samsungbrowser") > -1) { browser = "Samsung Browser"; } 
+      else if (lUa.indexOf("opera") > -1 || lUa.indexOf("opr") > -1) { browser = "Opera"; } 
+      else if (lUa.indexOf("edge") > -1 || lUa.indexOf("edg") > -1) { browser = "Microsoft Edge"; } 
+      else if (lUa.indexOf("; wv") > -1 || lUa.indexOf(" wv)") > -1 || lUa.indexOf("webview") > -1) { browser = "In-App Browser (WebView)"; } 
+      else if (lUa.indexOf("chrome") > -1 || lUa.indexOf("crios") > -1) { browser = "Google Chrome"; } 
+      else if (lUa.indexOf("safari") > -1) { browser = "Apple Safari"; } 
+      else if (isMobile) { browser = "Mobile Browser (Bawaan HP)"; } 
+      else { browser = "Desktop Browser (Bawaan PC)"; }
 
       if (isMobile) {
         let brand = "Mobile Device";
@@ -1169,20 +1109,14 @@
         if (navigator.userAgentData) {
           try {
             const highEntropy = await navigator.userAgentData.getHighEntropyValues(["model"]);
-            if (highEntropy && highEntropy.model) {
-              model = highEntropy.model;
-            }
-          } catch (e) {
-            console.warn("Client Hints tidak didukung browser ini, beralih ke UserAgent.");
-          }
+            if (highEntropy && highEntropy.model) { model = highEntropy.model; }
+          } catch (e) { console.warn("Client Hints tidak didukung."); }
         }
 
         if (!model || model === "K") {
           if (/Android/i.test(ua)) {
             const match = ua.match(/Android\s+([^\s;]+);\s+([^;)]+)/);
-            if (match && match[2]) {
-              model = match[2].trim();
-            }
+            if (match && match[2]) { model = match[2].trim(); }
           }
         }
 
@@ -1192,36 +1126,10 @@
           brand = "Apple";
           if (!model || model === "K") model = "iPhone";
         }
-        else if (/samsung|sm-[a-z0-9]+/i.test(searchString)) {
-          brand = "Samsung";
-        }
-        else if (/oppo|cph|pcfm|pact/i.test(searchString)) {
-          brand = "Oppo";
-        }
-        else if (/vivo|v2[0-9]+|v1[0-9]+/i.test(searchString)) {
-          brand = "Vivo";
-        }
-        else if (/xiaomi|redmi|poco|mi\s|m200|m210|m211|m2103/i.test(searchString)) {
-          brand = "Xiaomi / Redmi / POCO";
-        }
-        else if (/realme|rmx[0-9]+/i.test(searchString)) {
-          brand = "Realme";
-        }
-        else if (/infinix|x6[0-9]+/i.test(searchString)) {
-          brand = "Infinix";
-        }
-        else if (/huawei/i.test(searchString)) {
-          brand = "Huawei";
-        }
-        else if (/asus/i.test(searchString)) {
-          brand = "Asus";
-        }
-        else if (/pixel/i.test(searchString)) {
-          brand = "Google Pixel";
-        }
-        else if (/sony/i.test(searchString)) {
-          brand = "Sony";
-        }
+        else if (/samsung|sm-[a-z0-9]+/i.test(searchString)) { brand = "Samsung"; }
+        else if (/oppo|cph|pcfm|pact/i.test(searchString)) { brand = "Oppo"; }
+        else if (/vivo|v2[0-9]+|v1[0-9]+/i.test(searchString)) { brand = "Vivo"; }
+        else if (/xiaomi|redmi|poco|mi\s|m200|m210|m211|m2103/i.test(searchString)) { brand = "Xiaomi / Redmi / POCO"; }
 
         device = model && model !== "K" ? brand + " (" + model + ")" : brand;
       }
@@ -1237,7 +1145,7 @@
         const data = await response.json();
         ipAddress = data.ip;
       } catch (err) {
-        console.warn("Gagal mengambil IP, data akan dikirim tanpa informasi IP.");
+        console.warn("Gagal mengambil IP.");
       }
 
       const info = await getDeviceDetails();
@@ -1264,9 +1172,7 @@
         fetch(CONFIG_WEB_APP_URL, {
           method: 'POST',
           mode: 'no-cors',
-          headers: {
-            'Content-Type': 'application/json'
-          },
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
         }).catch(err => console.error("Tracking Error:", err));
       }
@@ -1278,158 +1184,37 @@
           sendTrackingData("Membuka Link Undangan");
         }
       }, 300);
-    });
-    </script>
 
-    <!-- ==================== INTERACTION PROCESSORS ==================== -->
-    <script type="text/javascript">
-    document.addEventListener("DOMContentLoaded", function() {
-      const urlParams = new URLSearchParams(window.location.search);
-      let customPhone = urlParams.get('phone') || urlParams.get('num') || urlParams.get('wa');
-      
-      if (customPhone) {
-        customPhone = customPhone.replace(/[^0-9]/g, '');
-        if (customPhone.startsWith('0')) {
-          customPhone = '62' + customPhone.substring(1);
-        }
-        sessionStorage.setItem('target_wa_phone', customPhone);
-      }
-
-      // RSVP Submission Logic
-      const rsvpForm = document.getElementById("rsvpForm");
-      if (rsvpForm) {
-        rsvpForm.addEventListener("submit", function(e) {
-          e.preventDefault();
-          playBeep(1100, 'sine', 0.4, 0.08);
-
-          const rsvpName = document.getElementById("rsvpName").value;
-          const rsvpAttendance = document.querySelector('input[name="rsvpAttendance"]:checked').value;
-          const rsvpMessage = document.getElementById("rsvpMessage").value;
-
-          if (typeof sendTrackingData === 'function') {
-            sendTrackingData("Kirim RSVP | Nama: " + rsvpName + " | Kehadiran: " + rsvpAttendance + " | Ucapan: " + rsvpMessage);
-          }
-
-          alert("Terima kasih! Sinyal konfirmasi kehadiran Anda berhasil kami terima.");
-          rsvpForm.reset();
-        });
-      }
-
-      // Share Link Submission Logic
-      const shareForm = document.getElementById("shareForm");
-      if (shareForm) {
-        shareForm.addEventListener("submit", function(e) {
-          e.preventDefault();
-          playBeep(988, 'sine', 0.2, 0.05);
-
-          const guestName = document.getElementById("guestTargetName").value;
-          let guestPhone = document.getElementById("guestTargetPhone").value;
-
-          guestPhone = guestPhone.replace(/[^0-9]/g, '');
-          if (guestPhone.startsWith('0')) {
-            guestPhone = '62' + guestPhone.substring(1);
-          }
-
-          const baseUrl = window.location.origin + window.location.pathname;
-          const targetRsvpPhone = sessionStorage.getItem('target_wa_phone');
-
-          let customInviteUrl = baseUrl + "?to=" + encodeURIComponent(guestName);
-          if (targetRsvpPhone) {
-            customInviteUrl += "&phone=" + targetRsvpPhone;
-          }
-
-          const inviteMessage = "Kepada Yth.\n" +
-                                "*Bapak/Ibu/Saudara/i " + guestName + "*\n\n" +
-                                "Tanpa mengurangi rasa hormat, perkenankan kami mengundang Anda untuk berkenan hadir dan memberikan doa restu pada acara pernikahan kami. Berikut tautan sinyal transmisi digital kami:\n\n" +
-                                customInviteUrl + "\n\n" +
-                                "Merupakan kehormatan bagi kami jika Anda terhubung dalam uplink sistem kami. Terima kasih.";
-
-          const encodedInviteMessage = encodeURIComponent(inviteMessage);
-          const waShareUrl = "https://api.whatsapp.com/send?phone=" + guestPhone + "&text=" + encodedInviteMessage;
-
-          window.open(waShareUrl, '_blank');
+      const mapsBtn = document.getElementById("btnLihatLokasi");
+      if (mapsBtn) {
+        mapsBtn.addEventListener("click", function() {
+          sendTrackingData("Lihat Lokasi (Google Maps)");
         });
       }
     });
 
-    // ==================== LIGHTWEIGHT PARTICLE CANVAS SCRIPT ====================
-    const canvas = document.getElementById('particle-canvas');
-    const ctx = canvas.getContext('2d');
+    // Handle RSVP Submission
+    const rsvpForm = document.getElementById("rsvpForm");
+    if (rsvpForm) {
+      rsvpForm.addEventListener("submit", function(e) {
+        e.preventDefault();
+        const rsvpName = document.getElementById("rsvpName").value;
+        const rsvpAttendance = document.querySelector('input[name="rsvpAttendance"]:checked').value;
+        const rsvpMessage = document.getElementById("rsvpMessage").value;
 
-    let particlesArray = [];
-    const maxParticles = 55;
-
-    function setCanvasSize() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-    }
-    setCanvasSize();
-    window.addEventListener('resize', setCanvasSize);
-
-    class Particle {
-        constructor() {
-            this.x = Math.random() * canvas.width;
-            this.y = Math.random() * canvas.height;
-            this.size = Math.random() * 2 + 1;
-            this.speedX = (Math.random() - 0.5) * 0.35;
-            this.speedY = (Math.random() - 0.5) * 0.35;
+        if (typeof sendTrackingData === 'function') {
+          sendTrackingData("Kirim RSVP | Nama: " + rsvpName + " | Kehadiran: " + rsvpAttendance + " | Ucapan: " + rsvpMessage);
         }
 
-        update() {
-            this.x += this.speedX;
-            this.y += this.speedY;
-
-            if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
-            if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
-        }
-
-        draw() {
-            ctx.fillStyle = 'rgba(0, 240, 255, 0.45)';
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-            ctx.fill();
-        }
+        playSfx(1200, 'sine', 0.4, 0.08);
+        alert("Konfirmasi kehadiran Anda telah berhasil direkam dalam sistem. Terima kasih!");
+        rsvpForm.reset();
+      });
     }
-
-    function initParticles() {
-        particlesArray = [];
-        for (let i = 0; i < maxParticles; i++) {
-            particlesArray.push(new Particle());
-        }
-    }
-    initParticles();
-
-    function connectParticles() {
-        let opacityValue = 1;
-        for (let a = 0; a < particlesArray.length; a++) {
-            for (let b = a; b < particlesArray.length; b++) {
-                let dist = Math.hypot(particlesArray[a].x - particlesArray[b].x, particlesArray[a].y - particlesArray[b].y);
-                if (dist < 120) {
-                    opacityValue = 1 - (dist / 120);
-                    ctx.strokeStyle = `rgba(0, 240, 255, ${opacityValue * 0.12})`;
-                    ctx.lineWidth = 1;
-                    ctx.beginPath();
-                    ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
-                    ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
-                    ctx.stroke();
-                }
-            }
-        }
-    }
-
-    function animateParticles() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        particlesArray.forEach(p => {
-            p.update();
-            p.draw();
-        });
-        connectParticles();
-        requestAnimationFrame(animateParticles);
-    }
-    animateParticles();
     </script>
+    <!-- ==================== SYSTEM TRACKING GOOGLE SHEETS END ==================== -->
 
-    <!-- Clean parameter scripts -->
+    <!-- URL Cleaning logic -->
     <script type="text/javascript">
     window.addEventListener('load', function() {
       setTimeout(function() {
