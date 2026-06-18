@@ -394,6 +394,33 @@
             line-height: 1.4;
         }
 
+        /* Interactive Google Maps Embedding UI */
+        .map-container {
+            width: 100%;
+            height: 250px;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+            margin: 20px 0;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            /* Cyberpunk theme filter matches with page theme */
+            filter: grayscale(40%) invert(90%) hue-rotate(190deg) brightness(85%) contrast(110%);
+            opacity: 0.8;
+            transition: all 0.4s ease;
+        }
+
+        .map-container:hover iframe {
+            opacity: 1;
+            filter: grayscale(0%) invert(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+        }
+
         .btn-map-uplink {
             display: inline-flex;
             align-items: center;
@@ -823,6 +850,16 @@
                         <h4>Lokasi Pusat</h4>
                         <p>Villa Tangerang regency 2 blok FC No18 RT/RW 007/009 kec. Psr Kemis , kel. Gelam jaya kab. Tangerang</p>
                     </div>
+                </div>
+
+                <!-- Google Maps Embedded Component -->
+                <div class="map-container">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=Villa%20Tangerang%20regency%202%20blok%20FC%20No18%20RT/RW%20007/009%20Gelam%20jaya%20Tangerang&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
                 
                 <a href="https://maps.app.goo.gl/q1VUsDVUoE7SEpfc6" target="_blank" class="btn-map-uplink" id="btnLihatLokasi">
